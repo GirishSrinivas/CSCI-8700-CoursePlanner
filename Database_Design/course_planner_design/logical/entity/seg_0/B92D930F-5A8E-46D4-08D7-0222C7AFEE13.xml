@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="net_id" id="93D0DDC9-AD36-0369-447B-75AEE656971C">
+<Attribute name="net id" id="93D0DDC9-AD36-0369-447B-75AEE656971C">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:43:27 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -98,14 +98,29 @@
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="nuid" id="177E571D-A42B-F2AB-256E-1C10E1390E77">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 16:20:50 UTC</createdTime>
+<generatorID>0E8B4DBA-7B71-E9E9-72F3-50CD57560854</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<referedAttribute>309BDDBA-5195-72B2-4B18-EC81D8EEAE66</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="CF5AD691-072A-5917-CB7C-82342C354740" name="login PK">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:44:17 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

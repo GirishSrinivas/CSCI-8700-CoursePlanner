@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1242F616-3B33-19AB-9969-F91E78F4F168" containerWithKeyObject="45C87F63-8F43-985F-938A-4D1501DD692A" localFKIndex="AD8FB18C-0B2B-F11E-E3C2-65CFF9190B6B" name="enrolls_Student_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>473CE383-7399-43D0-AC76-C329C8063961</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<referredTableLongName>Student</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>E84C3C2E-8701-DAFD-C384-D540AAEC24C8</referredTableID>
+<keyObject>103D789C-A78B-0C5C-5A40-DC767E1487E6</keyObject>
+<referredKeyID>103D789C-A78B-0C5C-5A40-DC767E1487E6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>nuid</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

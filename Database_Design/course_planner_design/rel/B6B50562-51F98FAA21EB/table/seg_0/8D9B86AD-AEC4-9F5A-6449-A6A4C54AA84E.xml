@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D9B86AD-AEC4-9F5A-6449-A6A4C54AA84E" name="course_conc">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>99622C76-7A53-404E-0145-DB9110C61E27</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="course_course_no" id="77E71C5A-EBFA-4058-9FCD-6C08405757AB">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>15005231-B929-0D5D-B5FE-0919FE518BF2</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A9B7DCB7-2B67-A258-3A19-84358AB142BD" referredColumn="4B2F4879-E684-7119-BE3D-A6AFDE415D15"/>
+</associations>
+</Column>
+<Column name="concentration_concentration_id" id="8DBC0DFA-AB34-DAC5-80D0-4419823A1A77">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>2D8BFC10-E051-B035-8CCA-B6B8BE379AED</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8B49ADE9-6642-77ED-45ED-36587199AB0E" referredColumn="EFD4AB6E-D6B3-D0A0-C689-5DD85253A009"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BBC0C5D4-81B4-9EF3-A0F7-52D53D17FEEF" name="course_conc_course_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>FF504DF7-8B97-1A68-FC7A-258952B15DAD</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77E71C5A-EBFA-4058-9FCD-6C08405757AB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E6E406C-310B-C031-C0FF-059935DF3552" name="course_conc_concentration_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>74D70A48-767F-77DD-C796-9844584C65C4</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DBC0DFA-AB34-DAC5-80D0-4419823A1A77"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

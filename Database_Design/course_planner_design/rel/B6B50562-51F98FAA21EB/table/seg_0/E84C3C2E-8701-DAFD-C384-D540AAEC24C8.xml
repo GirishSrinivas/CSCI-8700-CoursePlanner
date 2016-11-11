@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E84C3C2E-8701-DAFD-C384-D540AAEC24C8" name="Student">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>2B9FEBEE-F443-E1E0-A118-BE768D72F623</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nuid" id="B724BBA0-3DB8-96BF-AED9-F66B6D8B4E99">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>309BDDBA-5195-72B2-4B18-EC81D8EEAE66</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fname" id="0405B045-520C-196B-0032-6319C4DD73F4">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>DB9F2B84-075B-600B-400D-08E9C89CCC31</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lname" id="1090E43C-8133-950C-E6FF-165E81B97DC6">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>5658C674-B722-4F95-FAB0-C9AF6BE07C03</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="level" id="2EAE8785-170B-3510-1D08-DAF483D55186">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>23D890A0-B9E5-FF62-BEF9-40C9EF4EF18D</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Major" id="167CBDD7-9A43-924C-5D3F-11DE43769B10">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>304AEBF9-3D31-2EA5-2BA9-AFA09DD35047</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="concentration" id="0A3B6DE2-E200-7B7D-1847-1BA63B900BBB">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>991C24D7-D5B2-C964-E946-D1B203A8F5AA</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="103D789C-A78B-0C5C-5A40-DC767E1487E6" name="Student_PK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 13:02:16 UTC</createdTime>
+<generatorID>3931001B-20F7-CEEE-4523-DA64048111EF</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B724BBA0-3DB8-96BF-AED9-F66B6D8B4E99"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nuid" id="650C5FAE-5EF9-F961-2DE3-4E59815FE129">
+<Attribute name="Student nuid" id="650C5FAE-5EF9-F961-2DE3-4E59815FE129">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 07:19:34 UTC</createdTime>
 <generatorID>473CE383-7399-43D0-AC76-C329C8063961</generatorID>
@@ -29,7 +29,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="term" id="D35B14FC-252F-B127-F013-2D865DFB9982">
+<Attribute name="section term" id="D35B14FC-252F-B127-F013-2D865DFB9982">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 07:20:02 UTC</createdTime>
 <generatorID>DACECD8A-9AC5-2DF6-42FD-FF461FD451BD</generatorID>
@@ -43,7 +43,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="section_id" id="BF246F37-7D50-9BB9-0068-1E7C4686C3B3">
+<Attribute name="section section id" id="BF246F37-7D50-9BB9-0068-1E7C4686C3B3">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 07:20:02 UTC</createdTime>
 <generatorID>DACECD8A-9AC5-2DF6-42FD-FF461FD451BD</generatorID>
@@ -55,6 +55,20 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="year" id="C4D9496C-647C-E8C4-D780-66F0DBD0A2B6">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-11 16:15:09 UTC</createdTime>
+<generatorID>DACECD8A-9AC5-2DF6-42FD-FF461FD451BD</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<referedAttribute>D70053B3-862D-B47E-C392-B71CCCD8E91E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

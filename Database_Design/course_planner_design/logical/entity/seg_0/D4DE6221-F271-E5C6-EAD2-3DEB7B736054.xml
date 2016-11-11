@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="section_id" id="6D950EE4-C554-6DF6-7F56-4B63CE5B7F54">
+<Attribute name="section id" id="6D950EE4-C554-6DF6-7F56-4B63CE5B7F54">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:37:23 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -46,7 +46,6 @@
 <engineerTo>
 <item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -92,7 +91,7 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="start_date" id="2FC43CA0-C8EE-FC7E-B5FA-52568BD464C0">
+<Attribute name="start date" id="2FC43CA0-C8EE-FC7E-B5FA-52568BD464C0">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:39:46 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -105,7 +104,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="end_time" id="95846FA5-292C-595C-9011-058D5E8E2DAD">
+<Attribute name="end time" id="95846FA5-292C-595C-9011-058D5E8E2DAD">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:40:23 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -118,7 +117,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="start_time" id="5EF3EA1D-2C28-4800-E184-063C4E6FAB0D">
+<Attribute name="start time" id="5EF3EA1D-2C28-4800-E184-063C4E6FAB0D">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:40:36 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -131,7 +130,7 @@
 <logicalDatatype>LOGDT014</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="end_time_2" id="FC392958-9036-256E-646A-952027BEEF32">
+<Attribute name="end time 2" id="FC392958-9036-256E-646A-952027BEEF32">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:41:02 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -144,7 +143,7 @@
 <logicalDatatype>LOGDT014</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="course_no" id="D2CDB3BB-8970-5694-EC48-5341912C15CD">
+<Attribute name="course course no" id="D2CDB3BB-8970-5694-EC48-5341912C15CD">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 07:22:54 UTC</createdTime>
 <generatorID>2B514CF2-5179-8279-AB84-E3D01519EE06</generatorID>
@@ -157,9 +156,9 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="inst_id" id="CC982A81-54C4-3510-6DBD-1889715438D7">
+<Attribute name="instructor inst id" id="CC982A81-54C4-3510-6DBD-1889715438D7">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 07:43:49 UTC</createdTime>
 <generatorID>A7E35A48-6AB9-C043-FBFC-D2E29F73A012</generatorID>
@@ -172,7 +171,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -180,13 +179,15 @@
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:38:17 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>0EC738FD-ED0C-A507-12E3-0DF3D7138CA5</attributeRef>
 <attributeRef>6D950EE4-C554-6DF6-7F56-4B63CE5B7F54</attributeRef>
+<attributeRef>D70053B3-862D-B47E-C392-B71CCCD8E91E</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

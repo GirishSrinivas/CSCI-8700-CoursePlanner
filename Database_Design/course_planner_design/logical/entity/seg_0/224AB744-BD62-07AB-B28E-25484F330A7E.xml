@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="dept_id" id="94F3C580-8F39-20AD-A18B-24AFBDB9F87E">
+<Attribute name="dept id" id="94F3C580-8F39-20AD-A18B-24AFBDB9F87E">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:50:22 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -28,7 +28,7 @@
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="dept_name" id="A47394B2-6779-F7B0-984A-87272A5D4333">
+<Attribute name="dept name" id="A47394B2-6779-F7B0-984A-87272A5D4333">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:50:41 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -48,8 +48,9 @@
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:50:32 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

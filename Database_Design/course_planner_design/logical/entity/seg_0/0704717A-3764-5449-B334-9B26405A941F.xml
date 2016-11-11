@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="course_no" id="379AF063-03B1-57FB-720A-91875D0AB32A">
+<Attribute name="course no" id="379AF063-03B1-57FB-720A-91875D0AB32A">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:42:08 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -28,7 +28,7 @@
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="course_name" id="46546039-DEB1-0B43-470E-354D06D2F0FC">
+<Attribute name="course name" id="46546039-DEB1-0B43-470E-354D06D2F0FC">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:42:32 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -67,7 +67,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="course_type" id="DCCFEFC7-FBD6-B576-9A24-95725959716F">
+<Attribute name="course type" id="DCCFEFC7-FBD6-B576-9A24-95725959716F">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 07:31:58 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -86,8 +86,9 @@
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:42:28 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

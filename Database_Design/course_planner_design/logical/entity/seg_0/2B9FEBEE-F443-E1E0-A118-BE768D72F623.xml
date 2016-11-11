@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B9FEBEE-F443-E1E0-A118-BE768D72F623" name="Student">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-09 06:32:27 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nuid" id="309BDDBA-5195-72B2-4B18-EC81D8EEAE66">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-09 06:34:13 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fname" id="DB9F2B84-075B-600B-400D-08E9C89CCC31">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-09 06:35:40 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lname" id="5658C674-B722-4F95-FAB0-C9AF6BE07C03">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-09 06:36:07 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="level" id="23D890A0-B9E5-FF62-BEF9-40C9EF4EF18D">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-09 06:36:19 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Major" id="304AEBF9-3D31-2EA5-2BA9-AFA09DD35047">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-09 06:36:33 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="concentration" id="991C24D7-D5B2-C964-E946-D1B203A8F5AA">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-09 06:36:46 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3931001B-20F7-CEEE-4523-DA64048111EF" name="Student PK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-09 06:35:35 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>309BDDBA-5195-72B2-4B18-EC81D8EEAE66</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

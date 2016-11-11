@@ -154,7 +154,7 @@ public class LoginDAOImpl implements LoginDAO
 		}
 		catch (SQLException e) 
 		{
-			System.out.println("Update Error");
+			System.out.println("Delete Error");
 			throw e;
 		}
 		finally
@@ -198,7 +198,7 @@ public class LoginDAOImpl implements LoginDAO
 		}
 		catch (SQLException e) 
 		{
-			System.out.println("Update Error");
+			System.out.println("Login Error");
 			throw e;
 		}
 		finally

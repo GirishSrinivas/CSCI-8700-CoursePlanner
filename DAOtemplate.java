@@ -130,7 +130,7 @@
 		
 	}
 
-// 4. update
+// 4. delete
 
 	public void delete(LoginBean bean) throws ClassNotFoundException, SQLException 
 	{

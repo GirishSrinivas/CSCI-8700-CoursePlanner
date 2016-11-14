@@ -2,23 +2,32 @@ use course_planner;
 
 /* for login table */
 
-create table login(net_id varchar(25),
-    -> fname varchar(25),
-    -> lname varchar(25),
-    -> role varchar(25),
-    -> email varchar(50),
-    -> pwd varchar(25),
-    -> primary key (net_id));
-
+CREATE TABLE users(netid varchar(25),
+                   fname varchar(25),
+                   lname varchar(25),
+                   email varchar(50),
+                    PRIMARY KEY(netid));
 /* for student table */
 
-create table student(nuid int,
-    -> net_id varchar(25),
-    -> fname varchar(25),
-    -> lname varchar(25),
-    -> level varchar(25),
-    -> major varchar(25),
-    -> concentration varchar(25),
-    -> primary key(nuid));  
+CREATE TABLE login(nuid int,
+                   pwd varchar(25),
+                   netid varchar(25),
+                   PRIMARY KEY(nuid, netid),
+                   FOREIGN KEY(netid) REFERENCES users(netid));
+
+CREATE TABLE advisor(a_netid varchar(25),
+                     PRIMARY KEY(a_netid),
+                     FOREIGN KEY(a_netid) REFERENCES users(netid));
+
+CREATE TABLE student(s_netid varchar(25),
+                     s_level varchar(25),
+                     s_major varchar(25),
+                     s_conc varchar(25),
+                     a_netid varchar(25),
+                     PRIMARY KEY(s_netid),
+                     FOREIGN KEY(s_netid) REFERENCES users(netid),
+                     FOREIGN KEY(a_netid) REFERENCES advisor(a_netid))
+
+
 
 

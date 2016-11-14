@@ -154,7 +154,7 @@ public class EnrollsDAOImpl implements EnrollsDAO
 		}
 		catch (SQLException e) 
 		{
-			System.out.println("Update Error");
+			System.out.println("Delete Error");
 			throw e;
 		}
 		finally

@@ -149,7 +149,7 @@
 		}
 		catch (SQLException e) 
 		{
-			System.out.println("Update Error");
+			System.out.println("Delete Error");
 			throw e;
 		}
 		finally

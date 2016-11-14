@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="course_course_no" id="77E71C5A-EBFA-4058-9FCD-6C08405757AB">
+<Column name="course_c_no" id="77E71C5A-EBFA-4058-9FCD-6C08405757AB">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>15005231-B929-0D5D-B5FE-0919FE518BF2</generatorID>
@@ -17,14 +17,14 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="A9B7DCB7-2B67-A258-3A19-84358AB142BD" referredColumn="4B2F4879-E684-7119-BE3D-A6AFDE415D15"/>
 </associations>
 </Column>
-<Column name="concentration_concentration_id" id="8DBC0DFA-AB34-DAC5-80D0-4419823A1A77">
+<Column name="concentration_conc_id" id="8DBC0DFA-AB34-DAC5-80D0-4419823A1A77">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>2D8BFC10-E051-B035-8CCA-B6B8BE379AED</generatorID>
@@ -33,7 +33,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>

@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="course no" id="379AF063-03B1-57FB-720A-91875D0AB32A">
+<Attribute name="c_no" id="379AF063-03B1-57FB-720A-91875D0AB32A">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:42:08 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -28,7 +28,7 @@
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="course name" id="46546039-DEB1-0B43-470E-354D06D2F0FC">
+<Attribute name="c_name" id="46546039-DEB1-0B43-470E-354D06D2F0FC">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:42:32 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -39,9 +39,10 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="credits" id="CFF95CB9-A087-954C-884E-82D54B025E36">
+<Attribute name="c_credits" id="CFF95CB9-A087-954C-884E-82D54B025E36">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:42:44 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -54,7 +55,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="rotation" id="64B1BD0C-721B-19D9-3312-48B1E28FE6A3">
+<Attribute name="c_rotation" id="64B1BD0C-721B-19D9-3312-48B1E28FE6A3">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:42:58 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -67,7 +68,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="course type" id="DCCFEFC7-FBD6-B576-9A24-95725959716F">
+<Attribute name="c_type" id="DCCFEFC7-FBD6-B576-9A24-95725959716F">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 07:31:58 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -78,7 +79,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

@@ -15,15 +15,16 @@
 <ownerDesignName>course_planner_design</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="1242F616-3B33-19AB-9969-F91E78F4F168" referredColumn="B724BBA0-3DB8-96BF-AED9-F66B6D8B4E99"/>
 </associations>
 </Column>
-<Column name="section_term" id="A31AE984-4631-9044-234B-75DABE4C5195">
+<Column name="section_sec_term" id="A31AE984-4631-9044-234B-75DABE4C5195">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>D35B14FC-252F-B127-F013-2D865DFB9982</generatorID>
@@ -31,14 +32,15 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="34852650-A5E0-B63F-DB50-EBE0D6762464" referredColumn="5163CAA8-FA33-085B-782C-152BA5F3DB3D"/>
 </associations>
 </Column>
-<Column name="section_section_id" id="37836CC8-1B6E-23BA-F0C9-543FD8688069">
+<Column name="section_sec_sid" id="37836CC8-1B6E-23BA-F0C9-543FD8688069">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>BF246F37-7D50-9BB9-0068-1E7C4686C3B3</generatorID>
@@ -46,11 +48,55 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="34852650-A5E0-B63F-DB50-EBE0D6762464" referredColumn="C492E7C5-EDAB-4BA7-0ED0-FE1C06250792"/>
+</associations>
+</Column>
+<Column name="section_sec_year" id="B2A7D6AA-88E4-F4CA-E39B-70C994A91EF4">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<generatorID>C4D9496C-647C-E8C4-D780-66F0DBD0A2B6</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="34852650-A5E0-B63F-DB50-EBE0D6762464" referredColumn="7E6FB188-6E48-8380-7F4E-D04BDCA6DF61"/>
+</associations>
+</Column>
+<Column name="s_netid" id="62FA4697-7D83-4363-D448-AEA149242228">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<generatorID>6E55013F-87B2-212E-A67F-E88A005644A2</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Student_s_netid" id="E271EBEB-9A92-4C53-5123-5B414072242E">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 06:57:17 UTC</createdTime>
+<generatorID>8663EBD8-A025-FB87-473B-EE9B7C6D8AFB</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DAF0BAD-0F55-1872-6E97-34B2AD74B5E3" referredColumn="B724BBA0-3DB8-96BF-AED9-F66B6D8B4E99"/>
 </associations>
 </Column>
 </columns>
@@ -76,6 +122,18 @@
 <indexColumnUsage>
 <colUsage columnID="A31AE984-4631-9044-234B-75DABE4C5195"/>
 <colUsage columnID="37836CC8-1B6E-23BA-F0C9-543FD8688069"/>
+<colUsage columnID="B2A7D6AA-88E4-F4CA-E39B-70C994A91EF4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B9A4967-921F-B994-45E6-672167CE59FD" name="enrolls_Student_FKv1">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 06:57:17 UTC</createdTime>
+<generatorID>4E6ADFF6-808E-F26F-6ED4-E4CAF6364738</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E271EBEB-9A92-4C53-5123-5B414072242E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

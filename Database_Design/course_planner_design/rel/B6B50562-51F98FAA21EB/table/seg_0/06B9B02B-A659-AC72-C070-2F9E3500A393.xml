@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="course_no" id="4B2F4879-E684-7119-BE3D-A6AFDE415D15">
+<Column name="c_no" id="4B2F4879-E684-7119-BE3D-A6AFDE415D15">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>379AF063-03B1-57FB-720A-91875D0AB32A</generatorID>
@@ -20,7 +20,7 @@
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="course_name" id="A94C8B87-2FBD-A6DB-FA04-19A9EA4406C9">
+<Column name="c_name" id="A94C8B87-2FBD-A6DB-FA04-19A9EA4406C9">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>46546039-DEB1-0B43-470E-354D06D2F0FC</generatorID>
@@ -29,10 +29,11 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="credits" id="7E772A2A-B7D6-D905-33DC-F0B39066CEE5">
+<Column name="c_credits" id="7E772A2A-B7D6-D905-33DC-F0B39066CEE5">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>CFF95CB9-A087-954C-884E-82D54B025E36</generatorID>
@@ -44,7 +45,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="rotation" id="6FC5652C-BA81-0097-71E8-CFF288ACA719">
+<Column name="c_rotation" id="6FC5652C-BA81-0097-71E8-CFF288ACA719">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>64B1BD0C-721B-19D9-3312-48B1E28FE6A3</generatorID>
@@ -56,7 +57,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="course_type" id="6D1FF748-112C-79A0-EF80-15EE5928E7C3">
+<Column name="c_type" id="6D1FF748-112C-79A0-EF80-15EE5928E7C3">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>DCCFEFC7-FBD6-B576-9A24-95725959716F</generatorID>
@@ -65,7 +66,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

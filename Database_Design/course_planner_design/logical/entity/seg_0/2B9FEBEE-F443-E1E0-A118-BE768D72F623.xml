@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nuid" id="309BDDBA-5195-72B2-4B18-EC81D8EEAE66">
+<Attribute name="s_netid" id="309BDDBA-5195-72B2-4B18-EC81D8EEAE66">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:34:13 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -24,10 +24,11 @@
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="fname" id="DB9F2B84-075B-600B-400D-08E9C89CCC31">
+<Attribute name="s_fname" id="DB9F2B84-075B-600B-400D-08E9C89CCC31">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:35:40 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -41,7 +42,7 @@
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="lname" id="5658C674-B722-4F95-FAB0-C9AF6BE07C03">
+<Attribute name="s_lname" id="5658C674-B722-4F95-FAB0-C9AF6BE07C03">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:36:07 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -52,9 +53,24 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="level" id="23D890A0-B9E5-FF62-BEF9-40C9EF4EF18D">
+<Attribute name="s_email" id="BB1635D4-070D-5116-2CEF-89BAFAC988AD">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 21:18:14 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<engineerTo>
+<item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="s_level" id="23D890A0-B9E5-FF62-BEF9-40C9EF4EF18D">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:36:19 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -65,9 +81,10 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Major" id="304AEBF9-3D31-2EA5-2BA9-AFA09DD35047">
+<Attribute name="s_major" id="304AEBF9-3D31-2EA5-2BA9-AFA09DD35047">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:36:33 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -78,9 +95,10 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="concentration" id="991C24D7-D5B2-C964-E946-D1B203A8F5AA">
+<Attribute name="s_conc" id="991C24D7-D5B2-C964-E946-D1B203A8F5AA">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:36:46 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -91,17 +109,18 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="net id" id="D6D31B26-6491-F940-8DC0-2242EEF8BF41">
+<Attribute name="a_netid" id="6C710CE8-9441-7BCB-D2F4-B48D4EB2011A">
 <createdBy>Girish</createdBy>
-<createdTime>2016-11-11 16:20:58 UTC</createdTime>
-<generatorID>0E8B4DBA-7B71-E9E9-72F3-50CD57560854</generatorID>
+<createdTime>2016-11-13 07:02:57 UTC</createdTime>
+<generatorID>FD9A52A5-1418-8B8C-245C-2248D62A1556</generatorID>
 <ownerDesignName>course_planner_design</ownerDesignName>
 <engineerTo>
 <item key="B6B50562-6864-C28A-5A9A-51F98FAA21EB" value="true"/>
 </engineerTo>
-<referedAttribute>93D0DDC9-AD36-0369-447B-75AEE656971C</referedAttribute>
+<referedAttribute>FC6F5C9F-2349-921B-1573-B083A73A117B</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>

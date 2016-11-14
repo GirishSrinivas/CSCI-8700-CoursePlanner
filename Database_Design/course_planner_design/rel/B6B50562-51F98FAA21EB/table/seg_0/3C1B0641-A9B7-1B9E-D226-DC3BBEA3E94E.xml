@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="section_id" id="C492E7C5-EDAB-4BA7-0ED0-FE1C06250792">
+<Column name="sec_sid" id="C492E7C5-EDAB-4BA7-0ED0-FE1C06250792">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>6D950EE4-C554-6DF6-7F56-4B63CE5B7F54</generatorID>
@@ -16,10 +16,11 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="term" id="5163CAA8-FA33-085B-782C-152BA5F3DB3D">
+<Column name="sec_term" id="5163CAA8-FA33-085B-782C-152BA5F3DB3D">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>0EC738FD-ED0C-A507-12E3-0DF3D7138CA5</generatorID>
@@ -27,22 +28,22 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="year" id="7E6FB188-6E48-8380-7F4E-D04BDCA6DF61">
+<Column name="sec_year" id="7E6FB188-6E48-8380-7F4E-D04BDCA6DF61">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>D70053B3-862D-B47E-C392-B71CCCD8E91E</generatorID>
 <ownerDesignName>course_planner_design</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="seats" id="6BF6AD36-D0A3-A8E9-705F-16D247324581">
+<Column name="sec_seats" id="6BF6AD36-D0A3-A8E9-705F-16D247324581">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>DAA3F00C-26E1-5936-73C6-907FD820F636</generatorID>
@@ -54,7 +55,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="location" id="D6EADE13-57A1-BDFF-9555-8ECED6C5D532">
+<Column name="sec_loc" id="D6EADE13-57A1-BDFF-9555-8ECED6C5D532">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>3FFC0476-1D53-ED66-4688-FBF156F0B2AE</generatorID>
@@ -67,7 +68,7 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="days" id="F2150DA4-376A-F548-FB2D-39ADAC617DBA">
+<Column name="sec_days" id="F2150DA4-376A-F548-FB2D-39ADAC617DBA">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>C37EB255-D942-23EF-7221-A6A6895848D8</generatorID>
@@ -76,10 +77,11 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="start_date" id="9AF478D1-350F-733D-D166-D11902B9F199">
+<Column name="sec_sdate" id="9AF478D1-350F-733D-D166-D11902B9F199">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>2FC43CA0-C8EE-FC7E-B5FA-52568BD464C0</generatorID>
@@ -91,7 +93,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="end_time" id="FD8A7A9A-C799-ACB8-667D-A4AA8C3E85F8">
+<Column name="sec_edate" id="FD8A7A9A-C799-ACB8-667D-A4AA8C3E85F8">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>95846FA5-292C-595C-9011-058D5E8E2DAD</generatorID>
@@ -103,7 +105,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="start_time" id="A44FA180-A812-4677-CD74-91B86B443422">
+<Column name="sec_stime" id="A44FA180-A812-4677-CD74-91B86B443422">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>5EF3EA1D-2C28-4800-E184-063C4E6FAB0D</generatorID>
@@ -115,7 +117,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="end_time_2" id="5C2DDA94-022A-1296-FC78-C37EDBCBBEDA">
+<Column name="sec_etime" id="5C2DDA94-022A-1296-FC78-C37EDBCBBEDA">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>FC392958-9036-256E-646A-952027BEEF32</generatorID>
@@ -127,7 +129,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="course_course_no" id="176E62FE-6B81-BE4F-F61A-659B9E8FD99A">
+<Column name="course_c_no" id="176E62FE-6B81-BE4F-F61A-659B9E8FD99A">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>D2CDB3BB-8970-5694-EC48-5341912C15CD</generatorID>
@@ -136,7 +138,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -152,12 +154,24 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="A3FE3ED0-3173-7507-E77C-0A2E0D6341D4" referredColumn="AA15160F-740A-7BDE-7C77-21455E812214"/>
 </associations>
+</Column>
+<Column name="sec_aseats" id="D17060AC-270C-5D23-F5C0-95E3EC8CE129">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<generatorID>CAB96057-7931-9B16-358E-1FD5D121E9E8</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -172,6 +186,7 @@
 <indexColumnUsage>
 <colUsage columnID="5163CAA8-FA33-085B-782C-152BA5F3DB3D"/>
 <colUsage columnID="C492E7C5-EDAB-4BA7-0ED0-FE1C06250792"/>
+<colUsage columnID="7E6FB188-6E48-8380-7F4E-D04BDCA6DF61"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="477C33F8-6F33-E460-8D19-18172C9C1DC9" name="section_course_FK">

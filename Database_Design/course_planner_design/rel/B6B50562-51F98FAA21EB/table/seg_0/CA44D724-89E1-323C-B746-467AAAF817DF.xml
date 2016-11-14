@@ -85,6 +85,75 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="email1" id="AA4A3381-CD21-F5A4-8B88-ADC747290435">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<generatorID>8F359FF8-5249-5063-6F78-841A4B7244B9</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Student_s_netid" id="F136E963-6911-E8C0-5EA1-C546CB593AF8">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<generatorID>4989CED2-5A48-DC21-FAF1-CD3D8A3E9E64</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0738893-4E50-EE9B-8016-6CE762FEAC03" referredColumn="B724BBA0-3DB8-96BF-AED9-F66B6D8B4E99"/>
+</associations>
+</Column>
+<Column name="Advisor_a_netid" id="F5D1A4F1-56F5-778E-CE00-C16EA3A8C25E">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<generatorID>03A923AF-7B37-092C-20CA-B2615DC17CC8</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="848A576D-506D-15DE-D9CC-1A493D8F7CAB" referredColumn="5383FE3D-9CE7-8476-374B-9DBF8619C807"/>
+</associations>
+</Column>
+<Column name="netid" id="8B43ABEC-3B7B-8D98-E82C-6C2A5BC56031">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 06:57:17 UTC</createdTime>
+<generatorID>30A9BAB9-8C76-DED5-3A74-2991A4C76983</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="role1" id="20AA68FF-277A-96E7-5C18-AD7CA49FE888">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 06:57:17 UTC</createdTime>
+<generatorID>2B0A0E85-9EEE-B7F8-DA83-3F3CA54E82A4</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="9C794C98-3365-2ADD-0B6D-28F19B1BC819" name="login_PK">
@@ -96,7 +165,51 @@
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="0C465EA0-533D-A952-914B-9C752C5A4C21"/>
+<colUsage columnID="8B43ABEC-3B7B-8D98-E82C-6C2A5BC56031"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="70D19864-D800-2866-9967-1373C29D0226" name="login__IDX">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>31C50A75-2855-E54D-F030-699E0B9A0A7C</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F136E963-6911-E8C0-5EA1-C546CB593AF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0B09794-35A9-36BC-E11C-9B29A90B5555" name="login__IDXv1">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D09F2C65-340B-2B95-D09B-7663FF5A2B50</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="F5D1A4F1-56F5-778E-CE00-C16EA3A8C25E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F0207A4D-DB39-DD99-E751-867E85DEF934" name="login_Student_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<generatorID>31C50A75-2855-E54D-F030-699E0B9A0A7C</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F136E963-6911-E8C0-5EA1-C546CB593AF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC962D6A-600A-AF61-E0D7-3303647262FD" name="login_Advisor_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-12 20:58:46 UTC</createdTime>
+<generatorID>D09F2C65-340B-2B95-D09B-7663FF5A2B50</generatorID>
+<ownerDesignName>course_planner_design</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F5D1A4F1-56F5-778E-CE00-C16EA3A8C25E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

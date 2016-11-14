@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="concentration id" id="80D901A3-6A8C-9AA3-A9CB-47E5F8219177">
+<Attribute name="conc_id" id="80D901A3-6A8C-9AA3-A9CB-47E5F8219177">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:45:59 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>
@@ -28,7 +28,7 @@
 <dataTypeSize>15</dataTypeSize>
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="concentration name" id="519C18BD-7C9D-C2A9-095C-B2CF917EE53A">
+<Attribute name="conc_name" id="519C18BD-7C9D-C2A9-095C-B2CF917EE53A">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-09 06:46:58 UTC</createdTime>
 <ownerDesignName>course_planner_design</ownerDesignName>

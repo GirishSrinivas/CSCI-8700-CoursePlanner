@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="concentration_id" id="EFD4AB6E-D6B3-D0A0-C689-5DD85253A009">
+<Column name="conc_id" id="EFD4AB6E-D6B3-D0A0-C689-5DD85253A009">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>80D901A3-6A8C-9AA3-A9CB-47E5F8219177</generatorID>
@@ -20,7 +20,7 @@
 <ownDataTypeParameters>15,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="concentration_name" id="57AAC8DC-2CC5-6234-AE3A-3745B25A4762">
+<Column name="conc_name" id="57AAC8DC-2CC5-6234-AE3A-3745B25A4762">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-11 13:02:16 UTC</createdTime>
 <generatorID>519C18BD-7C9D-C2A9-095C-B2CF917EE53A</generatorID>

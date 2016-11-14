@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C9B859EC-F813-0485-BEE2-92493F047D04" name="concentration">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>B5A58835-C088-6643-4CCD-24F13AEB4014</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="conc_id" id="10A2DC12-2C0C-39DD-C56F-92C0817BB970">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>3E84750D-17AE-2BEE-A0CA-5BBD4CB68677</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="conc_name" id="EABDBB6B-5615-FCBE-BE6F-649EDAFAA273">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>8A172741-046A-B6C8-4618-8EA1AFD2D5E0</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D40493B1-CC1D-BDF4-70ED-1BF1A8B6390C" name="concentration_PK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>0C2D2EDD-0DAC-F8EE-1674-05468315A671</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10A2DC12-2C0C-39DD-C56F-92C0817BB970"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

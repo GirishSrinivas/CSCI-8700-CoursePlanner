@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="186F7C1F-5148-14ED-A701-A0C793A942DC" name="login">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>AB08ACAB-918F-2A72-1EE0-2638BAF5C9CE</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nuid" id="35BB7C07-BAF5-8F59-D105-91CBE711403E">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>112025E1-7D43-02AC-8057-88D2867EAFF4</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pwd" id="E04CC82A-29C5-6767-BF51-F90AA3F7E1BC">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>7316C2AE-E8C3-377E-F18E-A30EFA7323B0</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="u_netid" id="E41543CD-DDA8-8674-81B7-1A50B8A26034">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>CFC7783D-B4E2-08D3-AF2E-3F2848607085</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="36E05C6B-7800-4505-69A8-AB7C7E1F290C" name="login_PK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>F71A0917-B9E3-BD4D-40FC-FD394C898DCB</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35BB7C07-BAF5-8F59-D105-91CBE711403E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

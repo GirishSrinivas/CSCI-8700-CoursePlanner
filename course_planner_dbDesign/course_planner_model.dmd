@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="course_planner_model" id="5C633F8F-6158-45DD-533A-331670CC1D1A" version="3.5">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:36:04 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5C633F8F-6158-45DD-533A-331670CC1D1A</designId>
+</OSDM_Design>

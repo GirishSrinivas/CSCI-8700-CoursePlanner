@@ -1,0 +1,215 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="01A8D670-87EB-9061-8FBD-B61FF0F7E128" name="section">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>81F2CB94-D011-9B32-5AD7-FF632C3D0491</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="sec_sid" id="38EFBB68-21CC-E179-DDA8-9EF632EAD235">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>FD81897E-19B0-63D8-C8E4-986B509636FA</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_term" id="C018A99E-1410-60A3-B611-741A9BBEFECF">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>F18DDB94-7164-8E04-83B7-6B62B75F1641</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_year" id="7E111014-8EBA-578C-F686-33FD64D2D1F9">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>B406B452-A94B-A05D-787E-95D60545CBCB</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_seats" id="D74B3520-6873-40A6-35EA-7E59A054B906">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>ABC73455-D2F4-AB0F-55EA-EA0DC704B251</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_aseats" id="1EF6AFC6-1185-7739-D089-503AD79EC44B">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>A488497D-14C6-8412-BDCA-7ED0688ADE5F</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_loc" id="668C10C2-EF98-817C-787C-56395962A90B">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>F1F26CF9-93DD-94A6-87EA-CD8A42519793</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_days" id="14556C92-33E1-3698-1AA1-4EB44CB2F547">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>4E9D8002-2086-CB72-80CA-2A0DD187CFEE</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_sdate" id="A6137E84-611D-22F3-46E8-86913519E53D">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>271467BE-4EEB-5299-27A3-94E207DD960C</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_edate" id="A14E197B-DCFF-E52C-3D0C-2B8F9D9FB3FA">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>5DC875C5-10C8-9506-A856-2AD9AA73CEAB</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_stime" id="3A636E1E-250F-506E-352D-0B6403091080">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>88F0179D-404E-B25C-4A78-297FED6D20AC</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sec_etime" id="23AC4BC2-567D-6D8E-0EBA-1BEB27FE64DE">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>32D29233-5433-0320-1277-871E99866FF1</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="instructor_inst_id" id="F3D9BAC1-EBB7-C30E-F277-E6F572606CF8">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>7A9ECD89-CB3F-9380-9ECE-8EA905B1C646</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9CB8F55D-2918-0706-6B4D-2259CA0F7655" referredColumn="262DAD56-815D-4CB7-3075-FCD6FAEFB693"/>
+</associations>
+</Column>
+<Column name="course_c_id" id="31F93D52-4412-2FC7-20C8-58A23C2DD8F3">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>BE5D4D62-CF40-2131-726A-63B4041AF3F4</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="88FA8487-9EC9-0227-B8C8-399BEAA827CE" referredColumn="F906C0A1-CC0C-FD62-1E40-7472BD16D79D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="371BA926-48B3-F44E-3E39-1C7E20403928" name="section_PK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 20:45:58 UTC</createdTime>
+<generatorID>DB2EB6B4-F61C-225A-22A2-64DBE382B24E</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="38EFBB68-21CC-E179-DDA8-9EF632EAD235"/>
+<colUsage columnID="C018A99E-1410-60A3-B611-741A9BBEFECF"/>
+<colUsage columnID="7E111014-8EBA-578C-F686-33FD64D2D1F9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EB16A83-CD38-EC18-D90F-525E583756A3" name="section_instructor_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>D04D0E73-56FD-F17C-0E43-5C0FA2D9559D</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3D9BAC1-EBB7-C30E-F277-E6F572606CF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="360409A5-7C94-2EA4-1DD2-D194FDC936F2" name="section_course_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>FFD30270-D8F6-34A8-0883-0FC68435D9E2</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31F93D52-4412-2FC7-20C8-58A23C2DD8F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

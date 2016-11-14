@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="98124A9C-5B3D-B11E-FD9C-E84ED048D077" containerWithKeyObject="7D5CA509-ABB5-FF12-F40D-99B9792DFEB8" localFKIndex="2D60B43B-7A29-42F4-1EF5-D9C1F39F5E91" name="course_conc_concentration_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>4EEF2BC9-751E-6569-D2AB-11D67C51CCF0</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<referredTableLongName>concentration</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>C9B859EC-F813-0485-BEE2-92493F047D04</referredTableID>
+<keyObject>D40493B1-CC1D-BDF4-70ED-1BF1A8B6390C</keyObject>
+<referredKeyID>D40493B1-CC1D-BDF4-70ED-1BF1A8B6390C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>conc_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

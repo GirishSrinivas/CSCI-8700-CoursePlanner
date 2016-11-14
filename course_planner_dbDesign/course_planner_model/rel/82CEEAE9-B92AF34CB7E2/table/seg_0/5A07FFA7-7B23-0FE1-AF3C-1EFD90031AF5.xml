@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A07FFA7-7B23-0FE1-AF3C-1EFD90031AF5" name="enrolls">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>59C0C4E9-FEB8-F04D-BD2E-490BF25E54D7</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="section_sec_sid" id="1248E9F7-D491-08B0-EDC0-8BB6F706E00F">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>BAB2F85D-DB0A-4CAE-1096-F7B4A49C50CF</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C2DA16D-E231-789F-268D-916F03576496" referredColumn="38EFBB68-21CC-E179-DDA8-9EF632EAD235"/>
+</associations>
+</Column>
+<Column name="section_sec_term" id="98475AC4-0CB0-BE39-075C-63C30DA2C097">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>60044CD1-547D-F2AB-777E-C21AABEA7521</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C2DA16D-E231-789F-268D-916F03576496" referredColumn="C018A99E-1410-60A3-B611-741A9BBEFECF"/>
+</associations>
+</Column>
+<Column name="section_sec_year" id="70480EEE-EBC6-DA4E-E4CA-BB4AA0E1BAAB">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>F33489D1-D979-D97C-AFB1-A100ECDBBB89</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4C2DA16D-E231-789F-268D-916F03576496" referredColumn="7E111014-8EBA-578C-F686-33FD64D2D1F9"/>
+</associations>
+</Column>
+<Column name="student_s_netid" id="9B46FC34-D961-4E49-7753-CD7D4E6B4F0C">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>16165C81-7FF8-1EFE-D45F-8984529CB454</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8DA6278E-62F7-C790-93E2-C81E9986E62D" referredColumn="9BC7A48A-7269-0510-4FE0-3B7E5A618CF3"/>
+</associations>
+</Column>
+<Column name="s_netid" id="8A41C065-5E85-ED4D-4D86-41B3E90DFB45">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>7330AE75-482B-AEDE-E1F8-06793150EDD5</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0BFB34E4-46BA-8269-C9E0-C0C99B64C320" name="enrolls_section_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>D0450EDC-E2D9-CB43-11F7-551A74B1D832</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1248E9F7-D491-08B0-EDC0-8BB6F706E00F"/>
+<colUsage columnID="98475AC4-0CB0-BE39-075C-63C30DA2C097"/>
+<colUsage columnID="70480EEE-EBC6-DA4E-E4CA-BB4AA0E1BAAB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="38B69D61-C198-3C8A-2674-B871F94C6C6C" name="enrolls_student_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>697EEC61-0DBE-A6F7-285E-54599C028A0E</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B46FC34-D961-4E49-7753-CD7D4E6B4F0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

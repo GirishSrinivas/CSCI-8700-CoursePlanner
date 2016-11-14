@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0523150E-0DC4-32F4-1DE4-8301478CCF75" name="advisor">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>3D15BFED-68C3-70FC-B96B-DC0CC6B0D0ED</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="a_netid" id="79BE001E-4326-D8D3-03DA-119EC7FCD21A">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>87519BBE-D8D4-142A-28D6-C70EFF532B41</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="918285E1-258D-38CC-9880-04AF39F6A2E2" name="advisor_PK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-14 05:58:31 UTC</createdTime>
+<generatorID>660BB79C-EA19-5CE4-5F94-101FB4186342</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79BE001E-4326-D8D3-03DA-119EC7FCD21A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

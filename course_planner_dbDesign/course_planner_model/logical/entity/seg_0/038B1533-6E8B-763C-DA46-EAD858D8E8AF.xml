@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="038B1533-6E8B-763C-DA46-EAD858D8E8AF" name="course_conc">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:03:44 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="c_id" id="6C7C812A-A4ED-B97F-45FA-87628828EF78">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:04:48 UTC</createdTime>
+<generatorID>29E4AE6B-4EE6-9707-F0F9-F89965A594C2</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<referedAttribute>21E747C3-99EF-F557-D04F-BD1E6B198D52</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="conc_id" id="B992F93A-E53B-881B-91A1-3845CE8443F3">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:05:00 UTC</createdTime>
+<generatorID>4EEF2BC9-751E-6569-D2AB-11D67C51CCF0</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<referedAttribute>3E84750D-17AE-2BEE-A0CA-5BBD4CB68677</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

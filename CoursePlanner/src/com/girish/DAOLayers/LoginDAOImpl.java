@@ -177,8 +177,7 @@ public class LoginDAOImpl implements LoginDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con
-					.prepareStatement("SELECT count(*) from login where net_id=? and pwd=?");
+			PreparedStatement ps = con.prepareStatement("SELECT count(*) from login where net_id=? and pwd=?");
 			ps.setString(1, bean.getNet_id());
 			ps.setString(2, bean.getPwd());
 			ResultSet rs = ps.executeQuery();

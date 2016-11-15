@@ -6,6 +6,7 @@ CREATE TABLE users(netid varchar(25),
                    fname varchar(25),
                    lname varchar(25),
                    email varchar(50),
+                   role varchar(25),
                     PRIMARY KEY(netid));
 /* for student table */
 
@@ -84,6 +85,7 @@ CREATE TABLE enrolls(sec_sid varchar(25),
                      sec_term varchar(25),
                      sec_year int,
                      s_netid varchar(25),
+                     grade varchar(5),
                      FOREIGN KEY(sec_sid, sec_term, sec_year) REFERENCES section(sec_sid, sec_term, sec_year),
                      FOREIGN KEY(s_netid) REFERENCES student(s_netid))
 

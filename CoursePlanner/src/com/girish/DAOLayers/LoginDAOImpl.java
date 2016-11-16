@@ -25,12 +25,9 @@ public class LoginDAOImpl implements LoginDAO
 				{
 					bean = new LoginBean();
 					
-					bean.setNet_id(rs.getString(1));
-					bean.setFname(rs.getString(2));
-					bean.setLname(rs.getString(3));
-					bean.setRole(rs.getString(4));
-					bean.setEmail(rs.getString(5));
-					bean.setPwd(rs.getString(6));
+					bean.setNuid(rs.getInt(1));
+					bean.setPwd(rs.getString(2));
+					bean.setNetid(rs.getString(3));
 					
 					l.add(bean);
 				}
@@ -66,13 +63,10 @@ public class LoginDAOImpl implements LoginDAO
 		
 		try {
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("insert into login values(?,?,?,?,?,?)");
-			ps.setString(1, bean.getNet_id());
-			ps.setString(2, bean.getFname());
-			ps.setString(3, bean.getLname());
-			ps.setString(4, bean.getRole());
-			ps.setString(5, bean.getEmail());
-			ps.setString(6, bean.getPwd());
+			PreparedStatement ps = con.prepareStatement("insert into login values(?,?,?)");
+			ps.setInt(1, bean.getNuid());
+			ps.setString(2, bean.getPwd());
+			ps.setString(3, bean.getNetid());
 			ps.execute();
 			System.out.println("Data Inserted Successfully");
 			
@@ -108,9 +102,9 @@ public class LoginDAOImpl implements LoginDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("update login set pwd=? where net_id=?");
+			PreparedStatement ps = con.prepareStatement("update login set pwd=? where nuid=?");
 			ps.setString(1, bean.getPwd());
-			ps.setString(2, bean.getNet_id());
+			ps.setInt(2, bean.getNuid());
 			ps.executeUpdate();
 		}
 		catch (ClassNotFoundException e) 
@@ -143,9 +137,8 @@ public class LoginDAOImpl implements LoginDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con
-					.prepareStatement("delete from login where net_id=?");
-			ps.setString(1, bean.getNet_id());
+			PreparedStatement ps = con.prepareStatement("delete from login where nuid=?");
+			ps.setInt(1, bean.getNuid());
 			ps.execute();
 		}
 		catch (ClassNotFoundException e) 
@@ -177,8 +170,8 @@ public class LoginDAOImpl implements LoginDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT count(*) from login where net_id=? and pwd=?");
-			ps.setString(1, bean.getNet_id());
+			PreparedStatement ps = con.prepareStatement("SELECT count(*) from login where nuid=? and pwd=?");
+			ps.setInt(1, bean.getNuid());
 			ps.setString(2, bean.getPwd());
 			ResultSet rs = ps.executeQuery();
 			rs.next();

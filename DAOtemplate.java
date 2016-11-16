@@ -138,8 +138,7 @@
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con
-					.prepareStatement("delete from login where net_id=?");
+			PreparedStatement ps = con.prepareStatement("delete from login where net_id=?");
 			ps.setString(1, bean.getNet_id());
 			ps.execute();
 		}

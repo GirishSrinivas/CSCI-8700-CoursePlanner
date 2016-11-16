@@ -24,13 +24,11 @@ public class StudentDAOImpl implements StudentDAO
 			{
 				bean = new StudentBean();
 			
-				bean.setNuid(rs.getInt(1));
-				bean.setNet_id(rs.getString(2));
-				bean.setFname(rs.getString(3));
-				bean.setLname(rs.getString(4));
-				bean.setLevel(rs.getString(5));
-				bean.setMajor(rs.getString(6));
-				bean.setConcentration(rs.getString(7));
+				bean.setS_netid(rs.getString(1));
+				bean.setLevel(rs.getString(2));
+				bean.setMajor(rs.getString(3));
+				bean.setConcentration(rs.getString(4));
+				bean.setA_netid(rs.getString(5));
 				
 				l.add(bean);
 			}
@@ -65,14 +63,13 @@ public class StudentDAOImpl implements StudentDAO
 
 		try {
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("insert into student values(?,?,?,?,?,?,?)");
-			ps.setInt(1, bean.getNuid());
-			ps.setString(2, bean.getNet_id());
-			ps.setString(3, bean.getFname());
-			ps.setString(4, bean.getLname());
-			ps.setString(5, bean.getLevel());
-			ps.setString(6, bean.getMajor());
-			ps.setString(7, bean.getConcentration());
+			PreparedStatement ps = con.prepareStatement("insert into student values(?,?,?,?,?)");
+			
+			ps.setString(1, bean.getS_netid());
+			ps.setString(2, bean.getLevel());
+			ps.setString(3, bean.getMajor());
+			ps.setString(4, bean.getConcentration());
+			ps.setString(5, bean.getA_netid());
 
 			ps.execute();
 			System.out.println("Data Inserted Successfully");
@@ -109,10 +106,13 @@ public class StudentDAOImpl implements StudentDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("update student set major=?, concentration=? where nuid=?");
-			ps.setString(1, bean.getMajor());
-			ps.setString(2, bean.getConcentration());
-			ps.setInt(3, bean.getNuid());
+			PreparedStatement ps = con.prepareStatement("update student set s_level=?, s_major=?, s_conc=?, a_netid=? where s_netid=?");
+			ps.setString(1, bean.getLevel());
+			ps.setString(2, bean.getMajor());
+			ps.setString(3, bean.getConcentration());
+			ps.setString(4, bean.getA_netid());
+			ps.setString(5, bean.getS_netid());
+		
 			ps.executeUpdate();
 		}
 		catch (ClassNotFoundException e) 
@@ -144,8 +144,8 @@ public class StudentDAOImpl implements StudentDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("delete from student where nuid=?");
-			ps.setInt(1, bean.getNuid());
+			PreparedStatement ps = con.prepareStatement("delete from student where s_netid=?");
+			ps.setString(1, bean.getS_netid());
 			ps.execute();
 		}
 		catch (ClassNotFoundException e) 

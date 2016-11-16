@@ -2,49 +2,32 @@ package com.girish.DAOLayers;
 
 public class StudentBean  
 {
-	private int nuid;
-	private String net_id;
-	private String fname;
-	private String lname;
+	private String s_netid;
 	private String level;
 	private String major;
 	private String concentration;
+	private String a_netid;
 	
 	public StudentBean()
 	{
 		
 	}
 
-	public int getNuid() {
-		return nuid;
+
+	public String getS_netid() {
+		return s_netid;
 	}
 
-	public void setNuid(int nuid) {
-		this.nuid = nuid;
+	public void setS_netid(String s_netid) {
+		this.s_netid = s_netid;
 	}
 
-	public String getNet_id() {
-		return net_id;
+	public String getA_netid() {
+		return a_netid;
 	}
 
-	public void setNet_id(String net_id) {
-		this.net_id = net_id;
-	}
-
-	public String getFname() {
-		return fname;
-	}
-
-	public void setFname(String fname) {
-		this.fname = fname;
-	}
-
-	public String getLname() {
-		return lname;
-	}
-
-	public void setLname(String lname) {
-		this.lname = lname;
+	public void setA_netid(String a_netid) {
+		this.a_netid = a_netid;
 	}
 
 	public String getLevel() {

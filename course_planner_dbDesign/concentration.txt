@@ -1,0 +1,6 @@
+CSCI-AI_Artificial Intelligence
+CSCI-IA_Information Assurance
+CSCI-DB_Database Systems and Data Science
+CSCI-NW_Newtorks Technologes
+CSCI-SE_Software Engineering
+CSCI-GE_General

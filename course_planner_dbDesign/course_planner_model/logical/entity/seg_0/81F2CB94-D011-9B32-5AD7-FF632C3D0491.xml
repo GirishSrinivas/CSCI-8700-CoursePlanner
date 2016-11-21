@@ -79,6 +79,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="sec_enrollstat" id="F6278B39-78A5-73F1-B126-388DBA3ACE21">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-19 07:20:39 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="sec_loc" id="F1F26CF9-93DD-94A6-87EA-CD8A42519793">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-13 20:42:25 UTC</createdTime>
@@ -159,7 +173,7 @@
 <logicalDatatype>LOGDT014</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="inst_id" id="7A9ECD89-CB3F-9380-9ECE-8EA905B1C646">
+<Attribute name="inst_netid" id="7A9ECD89-CB3F-9380-9ECE-8EA905B1C646">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-13 21:05:52 UTC</createdTime>
 <generatorID>D04D0E73-56FD-F17C-0E43-5C0FA2D9559D</generatorID>
@@ -172,7 +186,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="c_id" id="BE5D4D62-CF40-2131-726A-63B4041AF3F4">
 <createdBy>Girish</createdBy>
@@ -187,7 +201,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

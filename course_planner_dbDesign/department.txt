@@ -1,0 +1,4 @@
+CSCI_Computer Science
+ISQA_Information Systems & Quantitative Analysis
+MATH_Mathematics
+Si2_School of Interdisciplinary Informatics

@@ -1,6 +1,10 @@
-CSCI-AI_Artificial Intelligence
-CSCI-IA_Information Assurance
-CSCI-DB_Database Systems and Data Science
-CSCI-NW_Newtorks Technologes
-CSCI-SE_Software Engineering
-CSCI-GE_General
+AI_Artificial Intelligence
+IA_Information Assurance
+DB_Database Systems and Data Science
+NW_Newtorks Technologes
+SE_Software Engineering
+CC_Core
+GE_General
+THE_Thesis
+PRO_Project
+CAP_Capstone

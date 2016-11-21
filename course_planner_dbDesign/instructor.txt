@@ -31,5 +31,7 @@ aparakh_Abhishek_Parakh_Si2
 elder_Griff_Elder_MATH
 jjhazuka_Jeffery_Hazuka_MATH
 rmei_Ren_Mei_CSCI
-jblackmore_Jeff_Blackmore_CSCI
+jblackmore_Jeff_Blackmore_CIST
 wmahoney_Bill_Mahoney_Si2
+svlasnik_Sandra_Vlasnik_ISQA
+blove_Betty_Love_MATH

@@ -9,5 +9,5 @@ public interface LoginDAO
 	public void write(LoginBean bean) throws ClassNotFoundException, SQLException;
 	public void update(LoginBean bean) throws ClassNotFoundException, SQLException;
 	public void delete(LoginBean bean) throws ClassNotFoundException, SQLException;
-	public boolean login(LoginBean bean) throws ClassNotFoundException, SQLException;
+	public UsersBean login(LoginBean bean) throws ClassNotFoundException, SQLException;
 }

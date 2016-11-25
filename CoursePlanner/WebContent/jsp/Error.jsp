@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h1>Error Logging in</h1>
+	<h2>Sorry! Login credentials didnt match</h2>
 	<h2>No user exists</h2>
 	<h3>
 		<a href="/CoursePlanner/">Click to go to LOGIN</a>

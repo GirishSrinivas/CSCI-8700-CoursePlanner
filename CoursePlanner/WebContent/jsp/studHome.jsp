@@ -11,27 +11,38 @@
 	<br>
 	<br>
 	<%
-		try{
+		try
+		{
 			if(request.getSession(false) != null)
 			{
 				UsersBean b = (UsersBean)session.getAttribute("user");
+				StudentBean sb = (StudentBean)session.getAttribute("stud");
 	%>
 				<h1>Welcome <%= b.getFname() +" " +b.getLname()%></h1>
 				<h2>Email: <%= b.getEmail() %></h2>
 				<h2>NETID: <%= b.getNetid() %></h2>
+				<h2>Level: <%= sb.getLevel() %></h2>
+				<h2>Major: <%=sb.getMajor() %></h2>
+				<h2>Concentration: <%= sb.getConcentration() %></h2>
 				<h3>Role: <%= b.getRole() %></h3>
-	<% 
-			}
+				<h3>
+					<a href="logout.jsp">Logout</a>
+				</h3>
+			
+	<% 		} 
 		}
 		catch(Exception e)
 		{
-	%>	
-			<jsp:forward page="Error.jsp"></jsp:forward>
-	<%
-		}
+	%>
+				<jsp:forward page="Error.jsp"></jsp:forward>
+	<%	
+		} 
 	%>
 	<h3>
-		<a href="logout.jsp">Logout</a>
+		<a href = "crsform.jsp">Course Select</a>
 	</h3>
+	<h3></h3>
+	<h3></h3>
+	
 </body>
 </html>

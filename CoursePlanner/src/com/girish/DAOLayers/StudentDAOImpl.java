@@ -170,4 +170,50 @@ public class StudentDAOImpl implements StudentDAO
 		}	
 	}
 
+	@Override
+	public StudentBean read(String netid) throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		StudentBean bean = null;
+		
+		try 
+		{
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT * FROM student WHERE s_netid = ?");
+			ps.setString(1, netid);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next())
+			{
+				bean = new StudentBean();
+			
+				bean.setS_netid(rs.getString(1));
+				bean.setLevel(rs.getString(2));
+				bean.setMajor(rs.getString(3));
+				bean.setConcentration(rs.getString(4));
+				bean.setA_netid(rs.getString(5));
+			}
+			return bean;
+		} 
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		} 
+		catch (SQLException e) 
+		{
+			System.out.println("Select Error...");
+			throw e;
+		}
+		finally
+		{
+			try
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch(SQLException e)
+			{
+				throw e;
+			}
+		}
+	}
+
 }

@@ -16,18 +16,47 @@
 	</head>
 	
 	<body>
-		<div class="container">
-			<h1>Course Planner</h1>
-			<p>
-				Here, comes the home page for the course planner.
-			</p>
-			
-			<p>	
-				And also links to login and logout pages...
-			</p>
-			<p>which also includes authentication...</p>
-		
+		<div class="container login-box">
+	<div class="col-sm-2"></div>
+		<div class="col-sm-8 login-box-div">
+		<form action = "jsp/login.jsp" method = "post">
+				<div class="form-group">
+				  <label for="usr">Email:</label>
+				  <input type="text" class="form-control" placeholder="NUID" name="nuid">
+				</div>
+				<div class="form-group">
+				  <label for="pwd">Password:</label>
+				  <input type="password" class="form-control" placeholder="Password" name="pwd">
+				</div>			
+				<br><br>
+				<div class="button-container">
+					<div class="col-sm-4"></div>
+					<div class="col-sm-4">
+						<button type="submit" class="btn btn-success">Login</button>
+					</div>
+					<div class="col-sm-4"></div>
+					
+				</div>
+			</form>
 		</div>
+	<div class="col-sm-2"></div>
+	</div>
 	
 	</body>
+	
+	<style>
+.login-box{
+	padding-top : 100px;
+}
+.login-box-div{
+	border: 3px solid black;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	padding-left: 8em;
+	padding-right: 8em;
+}
+.button-container{
+	text-align: center;
+}
+</style>
 </html>

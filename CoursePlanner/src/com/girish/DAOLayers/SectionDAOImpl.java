@@ -2,6 +2,7 @@ package com.girish.DAOLayers;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import com.girish.util.*;
 
@@ -192,5 +193,257 @@ public class SectionDAOImpl implements SectionDAO
 			}
 		}	
 	}
+
+	@Override
+	public List<Object []> customSelect(String s, int year) throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		SectionBean beans = null;
+		CourseBean beanc = null;
+		List<Object []> l = new ArrayList<>();
+		Object[] o;
+		
+		try
+		{
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("update section set sec_year = ?");
+			ps.setInt(1, year);
+			ps.execute();
+			
+			PreparedStatement ps1 = con.prepareStatement(
+					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course WHERE course.c_id = section.c_id AND "
+					+ "c_rotation = ? AND sec_term = ? "
+					+ "UNION "
+					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course "
+					+ "WHERE course.c_id = section.c_id AND "
+					+ " c_rotation = 0 AND sec_term = ?");
+		
+			if(year % 2 == 0)
+			{
+				ps1.setInt(1, 2);
+			}
+			else
+			{
+				ps1.setInt(1, 1);
+			}
+			ps1.setString(2, s);
+			ps1.setString(3, s);
+			ResultSet rs = ps1.executeQuery();
+			while(rs.next())
+			{
+				o = new Object[2];
+				beans = new SectionBean();
+				beanc = new CourseBean();
+				beans.setCourse_no(rs.getString(1));
+				beans.setSection_id(rs.getString(2));
+				beanc.setC_name(rs.getString(3));
+				beans.setTerm(rs.getString(4));
+				beans.setYear(rs.getInt(5));
+				beans.setInst_id(rs.getString(6));
+				o[0] = beans;
+				o[1] = beanc;
+				
+				l.add(o);
+			}
+			int yy = Calendar.getInstance().get(Calendar.YEAR);
+			ps = con.prepareStatement("update section set sec_year = ?");
+			ps.setInt(1, yy);
+			ps.execute();
+			
+			
+			return l;
+		}
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		} 
+		catch (SQLException e) 
+		{
+			System.out.println("Select Error...");
+			throw e;
+		}
+		finally
+		{
+			try
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch(SQLException e)
+			{
+				throw e;
+			}
+		}
+		
+	}
+
+	@Override
+	public List<Object[]> customSelectTerm(String s) throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		SectionBean beans = null;
+		CourseBean beanc = null;
+		List<Object []> l = new ArrayList<>();
+		Object[] o;
+		int year = Calendar.getInstance().get(Calendar.YEAR);
+		
+		try
+		{
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("update section set sec_year = ?");
+			ps.setInt(1, year);
+			ps.execute();
+			
+			PreparedStatement ps1 = con.prepareStatement(
+					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course WHERE course.c_id = section.c_id AND "
+					+ "c_rotation = ? AND sec_term = ? "
+					+ "UNION "
+					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course "
+					+ "WHERE course.c_id = section.c_id AND "
+					+ " c_rotation = 0 AND sec_term = ?");
+		
+			if(year % 2 == 0)
+			{
+				ps1.setInt(1, 2);
+			}
+			else
+			{
+				ps1.setInt(1, 1);
+			}
+			ps1.setString(2, s);
+			ps1.setString(3, s);
+			ResultSet rs = ps1.executeQuery();
+			while(rs.next())
+			{
+				o = new Object[2];
+				beans = new SectionBean();
+				beanc = new CourseBean();
+				beans.setCourse_no(rs.getString(1));
+				beans.setSection_id(rs.getString(2));
+				beanc.setC_name(rs.getString(3));
+				beans.setTerm(rs.getString(4));
+				beans.setYear(rs.getInt(5));
+				beans.setInst_id(rs.getString(6));
+				o[0] = beans;
+				o[1] = beanc;
+				
+				l.add(o);
+			}
+			return l;
+		}
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		} 
+		catch (SQLException e) 
+		{
+			System.out.println("Select Error...");
+			throw e;
+		}
+		finally
+		{
+			try
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch(SQLException e)
+			{
+				throw e;
+			}
+		}
+	}
+
+	@Override
+	public List<Object[]> customSelect() throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		SectionBean beans = null;
+		CourseBean beanc = null;
+		List<Object []> l = new ArrayList<>();
+		Object[] o;
+		int year = Calendar.getInstance().get(Calendar.YEAR);
+		int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+		String term = null;
+		
+		if(month >= 1 && month <= 4)
+		{
+			term = "Summer";
+		}
+		else if(month >= 5 && month <= 7)
+		{
+			term = "Fall";
+		}
+		else
+		{
+			term = "Spring";
+			year += 1;
+		}
+		
+		try
+		{	
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("update section set sec_year = ?");
+			ps.setInt(1, year);
+			ps.execute();
+			
+			PreparedStatement ps1 = con.prepareStatement(
+					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course WHERE course.c_id = section.c_id AND "
+					+ "c_rotation = ? AND sec_term = ? "
+					+ "UNION "
+					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course "
+					+ "WHERE course.c_id = section.c_id AND "
+					+ " c_rotation = 0 AND sec_term = ?");
+		
+			if(year % 2 == 0)
+			{
+				ps1.setInt(1, 2);
+			}
+			else
+			{
+				ps1.setInt(1, 1);
+			}
+			ps1.setString(2, term);
+			ps1.setString(3, term);
+			ResultSet rs = ps1.executeQuery();
+			while(rs.next())
+			{
+				o = new Object[2];
+				beans = new SectionBean();
+				beanc = new CourseBean();
+				beans.setCourse_no(rs.getString(1));
+				beans.setSection_id(rs.getString(2));
+				beanc.setC_name(rs.getString(3));
+				beans.setTerm(rs.getString(4));
+				beans.setYear(rs.getInt(5));
+				beans.setInst_id(rs.getString(6));
+				o[0] = beans;
+				o[1] = beanc;
+				
+				l.add(o);
+			}
+			return l;
+		}
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		} 
+		catch (SQLException e) 
+		{
+			System.out.println("Select Error...");
+			throw e;
+		}
+		finally
+		{
+			try
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch(SQLException e)
+			{
+				throw e;
+			}
+		}
+	}
+
+	
 
 }

@@ -9,6 +9,8 @@ import com.girish.DAOLayers.LoginBean;
 import com.girish.DAOLayers.LoginDAOImpl;
 import com.girish.DAOLayers.SectionBean;
 import com.girish.DAOLayers.SectionDAOImpl;
+import com.girish.DAOLayers.StudentBean;
+import com.girish.DAOLayers.StudentDAOImpl;
 import com.girish.DAOLayers.UsersBean;
 
 public class DatabaseTester 
@@ -18,6 +20,8 @@ public class DatabaseTester
 	{
 		SectionDAOImpl u = new SectionDAOImpl();
 		LoginDAOImpl log = new LoginDAOImpl();
+		LoginBean b = new LoginBean();
+		StudentDAOImpl sb = new StudentDAOImpl();
 		Scanner inp = new Scanner(System.in);
 		List<Object []> l = new ArrayList<>();
 		char ch;
@@ -97,13 +101,22 @@ public class DatabaseTester
 						int nuid = inp.nextInt();
 						System.out.print("Enter pwd: ");
 						String pwd = inp.next();
-						LoginBean b = new LoginBean();
+						
 						b.setNuid(nuid);
 						b.setPwd(pwd);
 						try
 						{
-							UsersBean bean = log.login(b);
-							System.out.println("Welcome "+bean.getFname());
+							UsersBean b1 = log.login(b);
+							System.out.println("Welcome "+b1.getFname());
+							if(b1.getRole().equals("Student"))
+							{
+								StudentBean bean = sb.read(b1.getNetid());
+								System.out.println("You'r a " +bean.getMajor() +" major");
+							}
+							else
+							{
+								System.out.println("You'r a " +b1.getRole());
+							}
 						}
 						catch(Exception e)
 						{

@@ -9,4 +9,5 @@ public interface StudentDAO
 	public void write(StudentBean bean) throws ClassNotFoundException, SQLException;
 	public void update(StudentBean bean) throws ClassNotFoundException, SQLException;
 	public void delete(StudentBean bean) throws ClassNotFoundException, SQLException;
+	public StudentBean read(String netid) throws ClassNotFoundException, SQLException;
 }

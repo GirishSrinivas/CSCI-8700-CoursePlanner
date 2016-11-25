@@ -83,7 +83,21 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9C0E828C-8A3F-9D54-AC03-2EE57F2692A7" name="student PK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-25 09:14:40 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F671E2C2-D95D-0E6F-3879-E2DE4351FEFD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

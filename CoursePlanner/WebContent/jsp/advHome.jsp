@@ -20,6 +20,13 @@
 				<h2>Email: <%= b.getEmail() %></h2>
 				<h2>NETID: <%= b.getNetid() %></h2>
 				<h3>Role: <%= b.getRole() %></h3>
+				
+				<h3>
+					<a href = "crsform.jsp">Course Select</a>
+				</h3>
+				<h3>
+					<a href="logout.jsp">Logout</a>
+				</h3>
 	<% 
 			}
 		}
@@ -30,8 +37,6 @@
 	<%
 		}
 	%>
-	<h3>
-		<a href="logout.jsp">Logout</a>
-	</h3>
+	
 </body>
 </html>

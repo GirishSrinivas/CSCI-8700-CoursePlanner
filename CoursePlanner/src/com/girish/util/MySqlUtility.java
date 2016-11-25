@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class MySqlUtility 
 {
-	static String url = "jdbc:mysql://localhost:8889/course_planner?autoReconnect=true&useSSL=false";
+	static String url = "jdbc:mysql://localhost:3306/course_planner?autoReconnect=true&useSSL=false";
 	static String usr = "root";
 	static String pwd = "root";
 

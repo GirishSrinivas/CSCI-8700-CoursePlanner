@@ -11,10 +11,11 @@ public class SectionBean
 	private String inst_id;
 	private int total_seats;
 	private int seats_taken;
+	private String status;
 	private String loc;
 	private String days;
-	private Date s_date;
-	private Date e_date;
+	private String s_date;
+	private String e_date;
 	private String s_time;
 	private String e_time;
 
@@ -95,19 +96,19 @@ public class SectionBean
 		this.days = days;
 	}
 
-	public Date getS_date() {
+	public String getS_date() {
 		return s_date;
 	}
 
-	public void setS_date(Date s_date) {
+	public void setS_date(String s_date) {
 		this.s_date = s_date;
 	}
 
-	public Date getE_date() {
+	public String getE_date() {
 		return e_date;
 	}
 
-	public void setE_date(Date e_date) {
+	public void setE_date(String e_date) {
 		this.e_date = e_date;
 	}
 
@@ -126,8 +127,13 @@ public class SectionBean
 	public void setE_time(String e_time) {
 		this.e_time = e_time;
 	}
-	
-	
-	
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	
 }

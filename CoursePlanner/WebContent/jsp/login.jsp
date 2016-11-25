@@ -14,10 +14,15 @@
 	
 		try
 		{
+			StudentDAOImpl sd = new StudentDAOImpl();
 			UsersBean b = log.login(bean);
+			
 			session.setAttribute("user", b);
 			if(b.getRole().equals("Student"))
 			{
+				StudentBean sb = sd.read(b.getNetid());
+				//request.setAttribute("stud", sb);
+				session.setAttribute("stud", sb);
 	%>
 				<jsp:forward page="studHome.jsp"></jsp:forward>
 	<%		}

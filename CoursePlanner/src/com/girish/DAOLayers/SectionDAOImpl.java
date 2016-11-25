@@ -33,8 +33,8 @@ public class SectionDAOImpl implements SectionDAO
 				bean.setSeats_taken(rs.getInt(7));
 				bean.setLoc(rs.getString(8));
 				bean.setDays(rs.getString(9));
-				bean.setS_date(rs.getDate(10));
-				bean.setE_date(rs.getDate(11));
+				bean.setS_date(rs.getString(10));
+				bean.setE_date(rs.getString(11));
 				bean.setS_time(rs.getString(12));
 				bean.setE_time(rs.getString(13));
 				
@@ -81,8 +81,8 @@ public class SectionDAOImpl implements SectionDAO
 			ps.setInt(7, bean.getSeats_taken());
 			ps.setString(8, bean.getLoc());
 			ps.setString(9, bean.getDays());
-			ps.setDate(10, bean.getS_date());
-			ps.setDate(11, bean.getE_date());
+			ps.setString(10, bean.getS_date());
+			ps.setString(11, bean.getE_date());
 			ps.setString(12, bean.getS_time());
 			ps.setString(13, bean.getE_time());
 			
@@ -130,8 +130,8 @@ public class SectionDAOImpl implements SectionDAO
 			ps.setInt(5, bean.getSeats_taken());
 			ps.setString(6, bean.getLoc());
 			ps.setString(7, bean.getDays());
-			ps.setDate(8, bean.getS_date());
-			ps.setDate(9, bean.getE_date());
+			ps.setString(8, bean.getS_date());
+			ps.setString(9, bean.getE_date());
 			ps.setString(10, bean.getS_time());
 			ps.setString(11, bean.getE_time());
 			ps.setString(12, bean.getCourse_no());
@@ -211,10 +211,13 @@ public class SectionDAOImpl implements SectionDAO
 			ps.execute();
 			
 			PreparedStatement ps1 = con.prepareStatement(
-					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course WHERE course.c_id = section.c_id AND "
+					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
+					+ "from section, course "
+					+ "WHERE course.c_id = section.c_id AND "
 					+ "c_rotation = ? AND sec_term = ? "
 					+ "UNION "
-					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course "
+					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
+					+ "from section, course "
 					+ "WHERE course.c_id = section.c_id AND "
 					+ " c_rotation = 0 AND sec_term = ?");
 		
@@ -239,7 +242,16 @@ public class SectionDAOImpl implements SectionDAO
 				beanc.setC_name(rs.getString(3));
 				beans.setTerm(rs.getString(4));
 				beans.setYear(rs.getInt(5));
-				beans.setInst_id(rs.getString(6));
+				beans.setTotal_seats(rs.getInt(6));
+				beans.setSeats_taken(rs.getInt(7));
+				beans.setStatus(rs.getString(8));
+				beans.setLoc(rs.getString(9));
+				beans.setDays(rs.getString(10));
+				beans.setS_time(rs.getString(11));
+				beans.setE_time(rs.getString(12));
+				beans.setS_date(rs.getString(13));
+				beans.setE_date(rs.getString(14));
+				beans.setInst_id(rs.getString(15));
 				o[0] = beans;
 				o[1] = beanc;
 				
@@ -294,10 +306,13 @@ public class SectionDAOImpl implements SectionDAO
 			ps.execute();
 			
 			PreparedStatement ps1 = con.prepareStatement(
-					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course WHERE course.c_id = section.c_id AND "
+					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
+					+ "from section, course "
+					+ "WHERE course.c_id = section.c_id AND "
 					+ "c_rotation = ? AND sec_term = ? "
 					+ "UNION "
-					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course "
+					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
+					+ "from section, course "
 					+ "WHERE course.c_id = section.c_id AND "
 					+ " c_rotation = 0 AND sec_term = ?");
 		
@@ -322,7 +337,16 @@ public class SectionDAOImpl implements SectionDAO
 				beanc.setC_name(rs.getString(3));
 				beans.setTerm(rs.getString(4));
 				beans.setYear(rs.getInt(5));
-				beans.setInst_id(rs.getString(6));
+				beans.setTotal_seats(rs.getInt(6));
+				beans.setSeats_taken(rs.getInt(7));
+				beans.setStatus(rs.getString(8));
+				beans.setLoc(rs.getString(9));
+				beans.setDays(rs.getString(10));
+				beans.setS_time(rs.getString(11));
+				beans.setE_time(rs.getString(12));
+				beans.setS_date(rs.getString(13));
+				beans.setE_date(rs.getString(14));
+				beans.setInst_id(rs.getString(15));
 				o[0] = beans;
 				o[1] = beanc;
 				
@@ -386,10 +410,13 @@ public class SectionDAOImpl implements SectionDAO
 			ps.execute();
 			
 			PreparedStatement ps1 = con.prepareStatement(
-					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course WHERE course.c_id = section.c_id AND "
+					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
+					+ "from section, course "
+					+ "WHERE course.c_id = section.c_id AND "
 					+ "c_rotation = ? AND sec_term = ? "
 					+ "UNION "
-					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, inst_netid from section, course "
+					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
+					+ "from section, course "
 					+ "WHERE course.c_id = section.c_id AND "
 					+ " c_rotation = 0 AND sec_term = ?");
 		
@@ -414,7 +441,16 @@ public class SectionDAOImpl implements SectionDAO
 				beanc.setC_name(rs.getString(3));
 				beans.setTerm(rs.getString(4));
 				beans.setYear(rs.getInt(5));
-				beans.setInst_id(rs.getString(6));
+				beans.setTotal_seats(rs.getInt(6));
+				beans.setSeats_taken(rs.getInt(7));
+				beans.setStatus(rs.getString(8));
+				beans.setLoc(rs.getString(9));
+				beans.setDays(rs.getString(10));
+				beans.setS_time(rs.getString(11));
+				beans.setE_time(rs.getString(12));
+				beans.setS_date(rs.getString(13));
+				beans.setE_date(rs.getString(14));
+				beans.setInst_id(rs.getString(15));
 				o[0] = beans;
 				o[1] = beanc;
 				

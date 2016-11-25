@@ -164,25 +164,32 @@ public class LoginDAOImpl implements LoginDAO
 	}
 
 	@Override
-	public boolean login(LoginBean bean) throws ClassNotFoundException, SQLException 
+	public UsersBean login(LoginBean bean) throws ClassNotFoundException, SQLException 
 	{
 		Connection con = null;
+		UsersBean b = null;
+
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT count(*) from login where nuid=? and pwd=?");
+			PreparedStatement ps = con.prepareStatement("select fname, lname, email, users.netid, role "
+									+ "from users, login "
+									+ "WHERE users.netid=login.netid AND "
+									+ "nuid = ? AND pwd = ?");
 			ps.setInt(1, bean.getNuid());
 			ps.setString(2, bean.getPwd());
 			ResultSet rs = ps.executeQuery();
-			rs.next();
-			if (rs.getInt("count") > 0)
+
+			if (rs.next())
 			{
-				return true;
+				b = new UsersBean();
+				b.setFname(rs.getString(1));
+				b.setLname(rs.getString(2));
+				b.setEmail(rs.getString(3));
+				b.setNetid(rs.getString(4));
+				b.setRole(rs.getString(5));
 			}
-			else
-			{
-				return false;
-			}
+			return b;
 		}
 		catch (ClassNotFoundException e) 
 		{

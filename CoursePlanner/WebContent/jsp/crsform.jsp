@@ -5,8 +5,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 </head>
+<style>
+	.nav-buttons
+	{
+		position: fixed;	
+		padding-left: 0;
+	}
+	.table
+	{
+		font-size: 10px;
+	}
+
+</style>
 <body>
+	<br>
+	<br>
+	<div class="container-fluid">
 	<%
 		SectionDAOImpl sdi = new SectionDAOImpl();
 		List<Object[]> l = new ArrayList<>();
@@ -18,17 +42,41 @@
 				if(b.getRole().equals("Student"))
 				{
 	%>
-					<h2>Course table for <%=b.getFname() +" " +b.getLname() %></h2>
+					<h2 style="text-align:center;">Course table for <%=b.getFname() +" " +b.getLname() %></h2>
 	<% 			}
 				else
 				{
 	%>
-					<h2>Course table for the Current Academic year</h2>
+					<h2 style="text-align:center;">Course table for the Current Academic year</h2>
 	<% 			}
 				l = sdi.customSelect();
 	%>
-				
-				<table border = 2>
+				</div>
+				<div class="container-fluid">
+				<div class="col-sm-2">
+					<div class="nav-buttons col-sm-2">
+			<% 			if(b.getRole().equals("Student"))
+						{
+			%>
+							<a class="btn btn-info col-sm-12" href="studHome.jsp">Profile</a><br><br><br>
+			<% 			}
+						else
+						{
+			%>
+							<a class="btn btn-info col-sm-12" href="advHome.jsp">Profile</a><br><br><br>
+			<% 			}
+			%>
+						<a class="btn btn-success col-sm-12" href="crsform.jsp">Course Schedule</a><br><br><br>
+						<a class="btn btn-success col-sm-12" href="#">Course Plan</a><br><br><br>
+						<a class="btn btn-success col-sm-12" href="#">Graduate Exit Requirement</a><br><br><br>
+						<a class="btn btn-success col-sm-12" href="#">Degree Works</a><br><br><br>
+						<a class="btn btn-success col-sm-12" href="#">Transcripts</a><br><br><br>
+						<a class="btn btn-danger col-sm-12" href="logout.jsp">Logout</a><br><br><br>
+					</div>
+				</div>
+				<div class="col-sm-10">
+				<div class="table-responsive">
+				<table class = "table table-hover">
 				<tr>
 					<th>Course ID</th>
 					<th>Section ID</th>
@@ -45,11 +93,13 @@
 					<th>Start Date</th>
 					<th>End Date</th>
 					<th>Instructor ID</th>
+					<th>Select</th>
 				</tr>
 	<%			for(Object[] o : l)
 				{
 					SectionBean sec = (SectionBean) o[0];
 					CourseBean c = (CourseBean)o[1];
+					
 	%>
 					<tr>
 						<td> <%= sec.getCourse_no()%></td>
@@ -67,31 +117,15 @@
 						<td><%= sec.getS_date()%></td>
 						<td><%= sec.getE_date()%></td>
 						<td><%= sec.getInst_id()%></td>
+						<td><a   href = "enroll.jsp?secid=<%=sec.getSection_id() %>&secterm=<%=sec.getTerm() %>&secyear=<%=sec.getYear() %>" class="btn btn-success" style="font-size:10px">Add</a></td>
 					</tr>	
 	<% 			}				
 	%>
 				</table>
+				</div>
+				</div>
+				</div>
 				
-	<% 			if(b.getRole().equals("Student"))
-				{
-	%>
-					<h3>
-						<a href="studHome.jsp">Home</a>
-					</h3>
-	<% 			}
-				else
-				{
-	%>
-					<h3>
-						<a href="advHome.jsp">Home</a>
-					</h3>
-	<% 			}
-	%>
-				
-				
-				<h3>
-					<a href="logout.jsp">Logout</a>
-				</h3>
 	<% 		} 	
 		}
 		catch(Exception e)

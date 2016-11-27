@@ -67,7 +67,7 @@
 			<% 			}
 			%>
 						<a class="btn btn-success col-sm-12" href="crsform.jsp">Course Schedule</a><br><br><br>
-						<a class="btn btn-success col-sm-12" href="#">Course Plan</a><br><br><br>
+						<a class="btn btn-success col-sm-12" href="enroll.jsp">Course Plan</a><br><br><br>
 						<a class="btn btn-success col-sm-12" href="#">Graduate Exit Requirement</a><br><br><br>
 						<a class="btn btn-success col-sm-12" href="#">Degree Works</a><br><br><br>
 						<a class="btn btn-success col-sm-12" href="#">Transcripts</a><br><br><br>
@@ -117,7 +117,7 @@
 						<td><%= sec.getS_date()%></td>
 						<td><%= sec.getE_date()%></td>
 						<td><%= sec.getInst_id()%></td>
-						<td><a   href = "enroll.jsp?secid=<%=sec.getSection_id() %>&secterm=<%=sec.getTerm() %>&secyear=<%=sec.getYear() %>" class="btn btn-success" style="font-size:10px">Add</a></td>
+						<td><a   href = "enrollcrs.jsp?secid=<%=sec.getSection_id() %>&secterm=<%=sec.getTerm() %>&secyear=<%=sec.getYear() %>" class="btn btn-success" style="font-size:10px">Add</a></td>
 					</tr>	
 	<% 			}				
 	%>

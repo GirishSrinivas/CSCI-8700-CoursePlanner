@@ -26,6 +26,7 @@ def create_database():
 
 def drop_tables():
     f.write("DROP TABLE IF EXISTS enrolls;" + "\n")
+    f.write("DROP TABLE IF EXISTS crspln;" + "\n")
     f.write("DROP TABLE IF EXISTS course_conc;" + "\n")
     f.write("DROP TABLE IF EXISTS section;" + "\n")
     f.write("DROP TABLE IF EXISTS student;" + "\n")
@@ -111,13 +112,29 @@ def create_tables():
               "FOREIGN KEY (c_id) REFERENCES course(c_id)," \
               "FOREIGN KEY (inst_netid) REFERENCES instructor(inst_netid));"
 
-    cre_enrolls = "CREATE TABLE enrolls(sec_sid varchar(25)," \
+    cre_enrolls = "CREATE TABLE enrolls(s_netid varchar(25)," \
+                  "c_id varchar(25)," \
+                  "sec_sid varchar(25)," \
                   "sec_term varchar(25)," \
                   "sec_year int," \
-                  "s_netid varchar(25)," \
+                  "gpa int," \
                   "grade varchar(5)," \
-                  "FOREIGN KEY(sec_sid, sec_term, sec_year) REFERENCES section(sec_sid, sec_term, sec_year)," \
-                  "FOREIGN KEY(s_netid) REFERENCES student(s_netid));"
+                  "status varchar(20)," \
+                  "PRIMARY KEY(c_id, sec_term, sec_year,s_netid)," \
+                  "FOREIGN KEY(sec_sid, sec_term) REFERENCES section(sec_sid, sec_term)," \
+                  "FOREIGN KEY(s_netid) REFERENCES student(s_netid)," \
+                  "FOREIGN KEY(c_id) REFERENCES course(c_id));"
+
+    cre_coursepln = "CREATE TABLE crspln(s_netid varchar(25)," \
+                    "c_id varchar(25)," \
+                    "sec_sid varchar(25)," \
+                    "sec_term varchar(25)," \
+                    "sec_year int," \
+                    "grade varchar(5)," \
+                    "PRIMARY KEY(c_id, sec_term, sec_year,s_netid)," \
+                    "FOREIGN KEY(sec_sid, sec_term) REFERENCES section(sec_sid, sec_term)," \
+                    "FOREIGN KEY(s_netid) REFERENCES student(s_netid)," \
+                    "FOREIGN KEY(c_id) REFERENCES course(c_id));"
 
     f.write(cre_users + "\n")
     f.write(cre_login + "\n")
@@ -130,6 +147,7 @@ def create_tables():
     f.write(cre_inst + "\n")
     f.write(cre_sec + "\n")
     f.write(cre_enrolls + "\n")
+    f.write(cre_coursepln + "\n")
     f.write("\n")
 
 

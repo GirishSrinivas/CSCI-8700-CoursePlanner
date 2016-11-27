@@ -3,6 +3,7 @@ CREATE DATABASE IF NOT EXISTS course_planner;
 USE course_planner;
 
 DROP TABLE IF EXISTS enrolls;
+DROP TABLE IF EXISTS crspln;
 DROP TABLE IF EXISTS course_conc;
 DROP TABLE IF EXISTS section;
 DROP TABLE IF EXISTS student;
@@ -24,7 +25,8 @@ CREATE TABLE course_conc(c_id varchar(25),conc_id varchar(25),FOREIGN KEY(c_id) 
 CREATE TABLE department(dept_id varchar(25),dept_name varchar(100),PRIMARY KEY(dept_id));
 CREATE TABLE instructor(inst_netid varchar(25),inst_fname varchar(25),inst_lname varchar(25),dept_id varchar(25),PRIMARY KEY(inst_netid),FOREIGN KEY(dept_id) REFERENCES department(dept_id));
 CREATE TABLE section(c_id varchar(25),sec_sid varchar(25),sec_year int,sec_term varchar(25),sec_seats int,sec_aseats int,sec_enstat varchar(25),sec_loc varchar(25),sec_days varchar(25),sec_stime varchar(25),sec_etime varchar(25),sec_sdate varchar(25),sec_edate varchar(25),inst_netid varchar(25),PRIMARY KEY(sec_sid, sec_term, sec_year),FOREIGN KEY (c_id) REFERENCES course(c_id),FOREIGN KEY (inst_netid) REFERENCES instructor(inst_netid));
-CREATE TABLE enrolls(sec_sid varchar(25),sec_term varchar(25),sec_year int,s_netid varchar(25),grade varchar(5),FOREIGN KEY(sec_sid, sec_term, sec_year) REFERENCES section(sec_sid, sec_term, sec_year),FOREIGN KEY(s_netid) REFERENCES student(s_netid));
+CREATE TABLE enrolls(s_netid varchar(25),c_id varchar(25),sec_sid varchar(25),sec_term varchar(25),sec_year int,gpa int,grade varchar(5),status varchar(20),PRIMARY KEY(c_id, sec_term, sec_year,s_netid),FOREIGN KEY(sec_sid, sec_term) REFERENCES section(sec_sid, sec_term),FOREIGN KEY(s_netid) REFERENCES student(s_netid),FOREIGN KEY(c_id) REFERENCES course(c_id));
+CREATE TABLE crspln(s_netid varchar(25),c_id varchar(25),sec_sid varchar(25),sec_term varchar(25),sec_year int,grade varchar(5),PRIMARY KEY(c_id, sec_term, sec_year,s_netid),FOREIGN KEY(sec_sid, sec_term) REFERENCES section(sec_sid, sec_term),FOREIGN KEY(s_netid) REFERENCES student(s_netid),FOREIGN KEY(c_id) REFERENCES course(c_id));
 
 INSERT INTO department VALUES('CSCI', 'Computer Science');
 INSERT INTO department VALUES('ISQA', 'Information Systems & Quantitative Analysis');
@@ -329,16 +331,16 @@ INSERT INTO users VALUES('bpainter', 'Brenda', 'Painter', 'bpainter@unomaha.edu'
 INSERT INTO advisor VALUES('lplanos');
 INSERT INTO advisor VALUES('bpainter');
 
-INSERT INTO student VALUES('gsrinivas', 'Masters', 'Computer Science', 'General', 'bpainter');
-INSERT INTO student VALUES('pyalala', 'Masters', 'Computer Science', 'General', 'bpainter');
-INSERT INTO student VALUES('cbalakrishna', 'Masters', 'Computer Science', 'General', 'lplanos');
-INSERT INTO student VALUES('vhegde', 'Masters', 'Computer Science', 'General', 'bpainter');
-INSERT INTO student VALUES('sandy', 'Masters', 'Computer Science', 'General', 'lplanos');
-INSERT INTO student VALUES('kkrishnappa', 'Masters', 'Computer Science', 'General', 'lplanos');
-INSERT INTO student VALUES('rsubramani', 'Masters', 'Computer Science', 'General', 'lplanos');
-INSERT INTO student VALUES('gpravi', 'Masters', 'Computer Science', 'General', 'lplanos');
-INSERT INTO student VALUES('areddy', 'Masters', 'Computer Science', 'General', 'bpainter');
-INSERT INTO student VALUES('bsn', 'Masters', 'Computer Science', 'General', 'bpainter');
+INSERT INTO student VALUES('gsrinivas', 'Masters', 'Computer Science', 'Artificial Intelligence', 'bpainter');
+INSERT INTO student VALUES('pyalala', 'Masters', 'Computer Science', 'Software Engineering', 'bpainter');
+INSERT INTO student VALUES('cbalakrishna', 'Masters', 'Computer Science', 'General', 'bpainter');
+INSERT INTO student VALUES('vhegde', 'Masters', 'Computer Science', 'Information Assurance', 'lplanos');
+INSERT INTO student VALUES('sandy', 'Masters', 'Computer Science', 'Database Systems and Data Science', 'lplanos');
+INSERT INTO student VALUES('kkrishnappa', 'Masters', 'Computer Science', 'Artificial Intelligence', 'bpainter');
+INSERT INTO student VALUES('rsubramani', 'Masters', 'Computer Science', 'Software Engineering', 'bpainter');
+INSERT INTO student VALUES('gpravi', 'Masters', 'Computer Science', 'Artificial Intelligence', 'lplanos');
+INSERT INTO student VALUES('areddy', 'Masters', 'Computer Science', 'General', 'lplanos');
+INSERT INTO student VALUES('bsn', 'Masters', 'Computer Science', 'Newtorks Technologes', 'lplanos');
 
 INSERT INTO login VALUES(11111, 'admin1', 'gsrinivas');
 INSERT INTO login VALUES(22222, 'admin2', 'pyalala');

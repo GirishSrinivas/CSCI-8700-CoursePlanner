@@ -151,7 +151,7 @@ public class EnrollsDAOImpl implements EnrollsDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("delete from enrolls where s_netid=? and sec_sid=? and sec_term=? and sec_year=?");
+			PreparedStatement ps = con.prepareStatement("delete from enrolls where s_netid=? and sec_term=? and sec_year=?");
 			ps.setString(1, bean.getStatus());
 			ps.setString(2, bean.getNetid());
 			ps.setString(3, bean.getSec_id());

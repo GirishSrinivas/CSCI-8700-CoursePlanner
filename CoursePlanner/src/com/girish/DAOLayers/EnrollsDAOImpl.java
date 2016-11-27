@@ -25,10 +25,14 @@ public class EnrollsDAOImpl implements EnrollsDAO
 				{
 					bean = new EnrollsBean();
 					
-					bean.setNuid(rs.getInt(1));
-					bean.setSec_id(rs.getString(2));
-					bean.setTerm(rs.getString(3));
-					bean.setYear(rs.getShort(4));
+					bean.setNetid(rs.getString(1));
+					bean.setC_id(rs.getString(2));
+					bean.setSec_id(rs.getString(3));
+					bean.setTerm(rs.getString(4));
+					bean.setYear(rs.getShort(5));
+					bean.setGpa(rs.getInt(6));
+					bean.setGrade(rs.getString(7));
+					bean.setStatus(rs.getString(8));
 					
 					l.add(bean);
 				}
@@ -64,11 +68,15 @@ public class EnrollsDAOImpl implements EnrollsDAO
 		
 		try {
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("insert into enrolls values(?,?,?,?)");
-			ps.setInt(1, bean.getNuid());
-			ps.setString(2, bean.getSec_id());
-			ps.setString(3, bean.getTerm());
-			ps.setInt(4, bean.getYear());
+			PreparedStatement ps = con.prepareStatement("insert into enrolls values(?,?,?,?,?,?,?,?)");
+			ps.setString(1, bean.getNetid());
+			ps.setString(2, bean.getC_id());
+			ps.setString(3, bean.getSec_id());
+			ps.setString(4, bean.getTerm());
+			ps.setInt(5, bean.getYear());
+			ps.setInt(6, bean.getGpa());
+			ps.setString(7, bean.getGrade());
+			ps.setString(8, bean.getStatus());
 			
 			ps.execute();
 			System.out.println("Data Inserted Successfully");
@@ -98,19 +106,19 @@ public class EnrollsDAOImpl implements EnrollsDAO
 	}
 
 	@Override
-	public void update(EnrollsBean bean) throws ClassNotFoundException, SQLException 
+	public void updateStatus(EnrollsBean bean) throws ClassNotFoundException, SQLException 
 	{
 		Connection con = null;
 		
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("update enrolls set term=?, year=? where nuid=? and section_id=?");
-			ps.setString(1, bean.getTerm());
-			ps.setInt(2, bean.getYear());
-			ps.setInt(3, bean.getNuid());
-			ps.setString(4, bean.getSec_id());
-			
+			PreparedStatement ps = con.prepareStatement("update enrolls set status=? where s_netid=? and sec_sid=? and sec_term=? and sec_year=?");
+			ps.setString(1, bean.getStatus());
+			ps.setString(2, bean.getNetid());
+			ps.setString(3, bean.getSec_id());
+			ps.setString(4, bean.getTerm());
+			ps.setInt(5, bean.getYear());
 			ps.executeUpdate();
 		}
 		catch (ClassNotFoundException e) 
@@ -143,9 +151,12 @@ public class EnrollsDAOImpl implements EnrollsDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("delete from enrolls where nuid=? and section_id=?");
-			ps.setInt(1, bean.getNuid());
-			ps.setString(2, bean.getSec_id());
+			PreparedStatement ps = con.prepareStatement("delete from enrolls where s_netid=? and sec_sid=? and sec_term=? and sec_year=?");
+			ps.setString(1, bean.getStatus());
+			ps.setString(2, bean.getNetid());
+			ps.setString(3, bean.getSec_id());
+			ps.setString(4, bean.getTerm());
+			ps.setInt(5, bean.getYear());
 			ps.execute();
 		}
 		catch (ClassNotFoundException e) 
@@ -168,6 +179,47 @@ public class EnrollsDAOImpl implements EnrollsDAO
 				throw e;
 			}
 		}	
+	}
+
+	@Override
+	public void updateGPA(EnrollsBean bean) throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		
+		try 
+		{
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("update enrolls set gpa=? and grade=? and status=? where s_netid=? and sec_sid=? and sec_term=? and sec_year=?");
+			ps.setInt(1, bean.getGpa());
+			ps.setString(2, bean.getGrade());
+			ps.setString(3, bean.getStatus());
+			ps.setString(4, bean.getNetid());
+			ps.setString(5, bean.getSec_id());
+			ps.setString(6, bean.getTerm());
+			ps.setInt(7, bean.getYear());
+			ps.executeUpdate();
+		}
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		}
+		catch (SQLException e) 
+		{
+			System.out.println("Update Error");
+			throw e;
+		}
+		finally
+		{
+			try 
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch (SQLException e) 
+			{
+				throw e;
+			}
+		}
+		
 	}
 	
 }

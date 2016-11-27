@@ -1,7 +1,5 @@
 package com.girish.DAOLayers;
 
-import java.sql.Date;
-
 public class SectionBean 
 {
 	private String course_no;

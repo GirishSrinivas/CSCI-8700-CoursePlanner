@@ -34,8 +34,9 @@
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-13 22:29:42 UTC</createdTime>
 <ownerDesignName>course_planner_model</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

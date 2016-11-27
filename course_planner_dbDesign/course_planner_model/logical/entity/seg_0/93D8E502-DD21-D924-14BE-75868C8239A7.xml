@@ -30,6 +30,21 @@
 <dataTypeSize>25</dataTypeSize>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="c_id" id="45FEA3F6-48E4-8BAD-C8AF-EF444F5EFD59">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:08:20 UTC</createdTime>
+<generatorID>2B10CB25-8112-4107-F56F-2557C3B19682</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<referedAttribute>21E747C3-99EF-F557-D04F-BD1E6B198D52</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="sec_sid" id="87B01AF5-5D8A-E4EF-6B94-19721AFA1C41">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-25 09:20:06 UTC</createdTime>
@@ -43,7 +58,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="sec_term" id="89DDE7A8-90B1-575A-454D-97B70AED6F68">
 <createdBy>Girish</createdBy>
@@ -58,7 +73,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="sec_year" id="7B135EB4-6C3D-F508-BF74-5CCAA8C1A0DA">
 <createdBy>Girish</createdBy>
@@ -73,6 +88,47 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="gpa" id="554EA315-A80F-C23E-E0FD-A6E28A3A8184">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:11:58 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="grade" id="6DEA4652-F175-7C76-4BD4-D0A5151F8616">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:12:21 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="6B04BE2F-EEBD-EDF9-0FA5-87E210CFE08C">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:12:42 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

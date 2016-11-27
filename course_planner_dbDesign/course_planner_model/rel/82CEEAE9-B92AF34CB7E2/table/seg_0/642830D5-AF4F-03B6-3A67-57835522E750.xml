@@ -59,7 +59,7 @@
 <ownDataTypeParameters>25,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="a_netid" id="8FEDFBCA-82FD-8DC4-F827-6F24DF0F2D84">
+<Column name="advisor_a_netid" id="8FEDFBCA-82FD-8DC4-F827-6F24DF0F2D84">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-14 05:58:31 UTC</createdTime>
 <generatorID>7748FAE7-AA51-3CF8-E239-02CDA60D6B70</generatorID>
@@ -67,22 +67,48 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8C8E7011-326C-8F7B-A118-7AB7C4AAA4DC" referredColumn="79BE001E-4326-D8D3-03DA-119EC7FCD21A"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="4C961CAB-2EC9-D5A0-BA6A-BB37E977ABC7" name="student_PK">
+<ind_PK_UK id="9B9BAFF1-FBDD-D52A-1250-84ADCF1FB64A" name="student_PKv1">
 <createdBy>Girish</createdBy>
-<createdTime>2016-11-13 21:12:56 UTC</createdTime>
-<generatorID>78223844-7146-17B7-383F-B7EEBD75C8D8</generatorID>
+<createdTime>2016-11-27 00:15:04 UTC</createdTime>
+<generatorID>9C0E828C-8A3F-9D54-AC03-2EE57F2692A7</generatorID>
 <ownerDesignName>course_planner_model</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="9BC7A48A-7269-0510-4FE0-3B7E5A618CF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4C961CAB-2EC9-D5A0-BA6A-BB37E977ABC7" name="student_PK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-13 21:12:56 UTC</createdTime>
+<generatorID>78223844-7146-17B7-383F-B7EEBD75C8D8</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BC7A48A-7269-0510-4FE0-3B7E5A618CF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F8492A22-7D01-2637-D9E6-325B4D10E21C" name="student_advisor_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:15:04 UTC</createdTime>
+<generatorID>AFA48E5A-A902-487A-5E0D-61818E8FC449</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8FEDFBCA-82FD-8DC4-F827-6F24DF0F2D84"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

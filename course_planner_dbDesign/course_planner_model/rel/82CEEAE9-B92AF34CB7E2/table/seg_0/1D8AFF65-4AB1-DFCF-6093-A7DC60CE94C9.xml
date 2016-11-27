@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="inst_id" id="262DAD56-815D-4CB7-3075-FCD6FAEFB693">
+<Column name="inst_netid" id="262DAD56-815D-4CB7-3075-FCD6FAEFB693">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-13 21:12:56 UTC</createdTime>
 <generatorID>CEAD0F67-E618-C2D6-E322-978410F47F4C</generatorID>
@@ -55,7 +55,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>

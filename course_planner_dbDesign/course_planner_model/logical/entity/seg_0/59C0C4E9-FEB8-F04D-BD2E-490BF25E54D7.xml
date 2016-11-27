@@ -15,6 +15,36 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="s_netid" id="EF74FC43-A565-0883-C7EF-870401353B46">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-25 09:14:41 UTC</createdTime>
+<generatorID>0A896D85-A06D-7B40-3F2B-B0B44A496CF7</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<referedAttribute>F671E2C2-D95D-0E6F-3879-E2DE4351FEFD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="c_id" id="BA531226-74C4-6FB7-2866-E69A04955CE2">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:16:25 UTC</createdTime>
+<generatorID>C344B0BD-5CA5-E5C2-DBB4-517F7DB4E355</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<referedAttribute>21E747C3-99EF-F557-D04F-BD1E6B198D52</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="sec_sid" id="BAB2F85D-DB0A-4CAE-1096-F7B4A49C50CF">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-13 21:07:21 UTC</createdTime>
@@ -28,7 +58,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="sec_term" id="60044CD1-547D-F2AB-777E-C21AABEA7521">
 <createdBy>Girish</createdBy>
@@ -59,20 +89,47 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="s_netid" id="EF74FC43-A565-0883-C7EF-870401353B46">
+<Attribute name="gpa" id="160A5DD1-11E0-1A5D-4F81-9A6E956E7F17">
 <createdBy>Girish</createdBy>
-<createdTime>2016-11-25 09:14:41 UTC</createdTime>
-<generatorID>0A896D85-A06D-7B40-3F2B-B0B44A496CF7</generatorID>
+<createdTime>2016-11-27 00:16:43 UTC</createdTime>
+<comment>						</comment>
 <ownerDesignName>course_planner_model</ownerDesignName>
 <engineerTo>
 <item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
 </engineerTo>
-<referedAttribute>F671E2C2-D95D-0E6F-3879-E2DE4351FEFD</referedAttribute>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="grade" id="DD535DAE-5603-BE4A-AE99-517031033F81">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:17:07 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="0D08D167-9BF3-A828-DA18-C04EFEE2A3E7">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:17:19 UTC</createdTime>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<engineerTo>
+<item key="82CEEAE9-DCF5-ED16-0A08-B92AF34CB7E2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

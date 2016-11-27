@@ -150,7 +150,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -166,12 +166,25 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="88FA8487-9EC9-0227-B8C8-399BEAA827CE" referredColumn="F906C0A1-CC0C-FD62-1E40-7472BD16D79D"/>
 </associations>
+</Column>
+<Column name="sec_enrollstat" id="06CD95F5-F833-05B2-D0C8-66C2AFB53BA4">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:15:04 UTC</createdTime>
+<generatorID>F6278B39-78A5-73F1-B126-388DBA3ACE21</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

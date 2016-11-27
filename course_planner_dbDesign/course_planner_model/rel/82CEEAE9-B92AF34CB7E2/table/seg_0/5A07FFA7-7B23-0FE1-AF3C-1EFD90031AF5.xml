@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A07FFA7-7B23-0FE1-AF3C-1EFD90031AF5" name="enrolls">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5A07FFA7-7B23-0FE1-AF3C-1EFD90031AF5" name="course_plan">
 <createdBy>Girish</createdBy>
 <createdTime>2016-11-13 21:12:56 UTC</createdTime>
 <generatorID>59C0C4E9-FEB8-F04D-BD2E-490BF25E54D7</generatorID>
@@ -17,7 +17,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -33,7 +33,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>15</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -64,7 +64,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
@@ -82,6 +82,22 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="student_s_netid" id="DB138735-856F-29DD-A10F-FF13597FEA05">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:15:04 UTC</createdTime>
+<generatorID>EF74FC43-A565-0883-C7EF-870401353B46</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D0B09158-C28E-5CA6-6505-D42DA0EF1444" referredColumn="9BC7A48A-7269-0510-4FE0-3B7E5A618CF3"/>
+</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -107,6 +123,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="9B46FC34-D961-4E49-7753-CD7D4E6B4F0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="60402B92-83EC-5485-8F7B-1CBD4E339FCF" name="course_plan_student_FK">
+<createdBy>Girish</createdBy>
+<createdTime>2016-11-27 00:15:04 UTC</createdTime>
+<generatorID>0A896D85-A06D-7B40-3F2B-B0B44A496CF7</generatorID>
+<ownerDesignName>course_planner_model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB138735-856F-29DD-A10F-FF13597FEA05"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

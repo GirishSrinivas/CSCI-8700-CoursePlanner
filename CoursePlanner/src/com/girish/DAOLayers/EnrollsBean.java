@@ -2,22 +2,26 @@ package com.girish.DAOLayers;
 
 public class EnrollsBean 
 {
-	private int nuid;
+	private String netid;
+	private String c_id;
 	private String sec_id;
 	private String term;
 	private int year;
+	private int gpa;
+	private String grade;
+	private String status;
 	
 	public EnrollsBean()
 	{
 		
 	}
 
-	public int getNuid() {
-		return nuid;
+	public String getNetid() {
+		return netid;
 	}
 
-	public void setNuid(int nuid) {
-		this.nuid = nuid;
+	public void setNetid(String netid) {
+		this.netid = netid;
 	}
 
 	public String getSec_id() {
@@ -42,6 +46,38 @@ public class EnrollsBean
 
 	public void setYear(int year) {
 		this.year = year;
+	}
+
+	public int getGpa() {
+		return gpa;
+	}
+
+	public void setGpa(int gpa) {
+		this.gpa = gpa;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getC_id() {
+		return c_id;
+	}
+
+	public void setC_id(String c_id) {
+		this.c_id = c_id;
 	}
 	
 	

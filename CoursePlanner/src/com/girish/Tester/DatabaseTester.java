@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.girish.DAOLayers.CourseBean;
+import com.girish.DAOLayers.CoursePlanBean;
+import com.girish.DAOLayers.CoursePlanDAOImpl;
 import com.girish.DAOLayers.LoginBean;
 import com.girish.DAOLayers.LoginDAOImpl;
 import com.girish.DAOLayers.SectionBean;
@@ -32,6 +34,7 @@ public class DatabaseTester
 			System.out.println("2. Custom Select based on Term only");
 			System.out.println("3. Select Enrollment");
 			System.out.println("4. Login");
+			System.out.println("5. is present");
 			System.out.println("Press any key to exit");
 			System.out.print("Enter your choice: ");
 			int choice = inp.nextInt();
@@ -122,6 +125,33 @@ public class DatabaseTester
 						{
 							System.out.println(e.getMessage());
 						}
+						break;
+						
+				case 5: CoursePlanDAOImpl cpd = new CoursePlanDAOImpl();
+						CoursePlanBean cpb = new CoursePlanBean();
+						System.out.print("Enter netid: ");
+						cpb.setNetid(inp.next());
+						System.out.print("Enter course id: ");
+						cpb.setC_id(inp.next());
+						System.out.print("Enter sec id: ");
+						cpb.setSec_id(inp.next());
+						System.out.print("Enter Term: ");
+						cpb.setTerm(inp.next());
+						System.out.print("Enter Year: ");
+						cpb.setYear(inp.nextInt());
+						
+						try 
+						{
+							boolean res = cpd.isPresent(cpb);
+							System.out.println("Its working " +res);
+						} 
+						catch (Exception e) 
+						{
+							System.out.println("Its not working");
+						}
+						
+						
+						
 						break;
 	
 				default: System.exit(0);

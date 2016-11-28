@@ -36,11 +36,13 @@
 			{
 				UsersBean b = (UsersBean)session.getAttribute("user");
 				CoursePlanDAOImpl cpd = new CoursePlanDAOImpl();
+				EnrollsBean eb = new EnrollsBean();
+				EnrollsDAOImpl edi = new EnrollsDAOImpl();
 				List<Object[]> l = new ArrayList<>();
 				l = cpd.read(b.getNetid());
 	%>
 				<script>
-					$("title").html("<%= b.getFname() %>");
+					$("title").html("<%= b.getFname() +" " +b.getLname()%>");
 			</script>
 				<div class="container-fluid">
 					<div class="col-sm-2">
@@ -74,26 +76,46 @@
 				<table class = "table table-hover">
 					<tr>
 						<th>Course ID</th>
+						<th>Section ID</th>
 						<th>Course Name</th>
 						<th> Term</th>
 						<th>Year</th>
 						<th>Grade</th>
-						<th colspan="2">Select</th>
+						<th colspan="2" style="text-align: center">Select</th>
 					</tr>
 	<%
 				for(Object[] o : l)
 				{
 					CoursePlanBean cpb = (CoursePlanBean)o[0];
 					CourseBean cb = (CourseBean)o[1];
+					
+					eb.setNetid(b.getNetid());
+					eb.setC_id(cpb.getC_id());
+					eb.setSec_id(cpb.getSec_id());
+					eb.setTerm(cpb.getTerm());
+					eb.setYear(cpb.getYear());
 	%>
 					<tr>
 						<td><%= cpb.getC_id()%></td>
+						<td><%= cpb.getSec_id()%></td>
 						<td><%= cb.getC_name()%></td>
 						<td><%= cpb.getTerm()%></td>
 						<td><%= cpb.getYear()%></td>
 						<td><%= cpb.getGrade()%></td>
-						<td><a href = "#" class="btn btn-success" style="font-size:10px">Enroll</a></td>
-						<td><a href = "rmvcrspln.jsp?cid=<%= cpb.getC_id()%>&term=<%= cpb.getTerm()%>&yr=<%= cpb.getYear()%>" class="btn btn-warning" style="font-size:10px">Remove</a></td>
+
+	<%				if(edi.isPresent(eb))
+					{
+	%>
+						<td><a href = "#" class="btn btn-success disabled" style="font-size:11px">Enroll</a></td>
+						<td><a href = "#" class="btn btn-warning disabled" style="font-size:11px">Remove</a></td>
+	<%				}
+					else
+					{
+	%>
+						<td><a href = "crsenroll.jsp?cid=<%= cpb.getC_id()%>&sid=<%= cpb.getSec_id()%>&term=<%= cpb.getTerm()%>&yr=<%= cpb.getYear()%>" class="btn btn-success" style="font-size:11px">Enroll</a></td>
+						<td><a href = "rmvcrspln.jsp?cid=<%= cpb.getC_id()%>&term=<%= cpb.getTerm()%>&yr=<%= cpb.getYear()%>" class="btn btn-warning" style="font-size:11px">Remove</a></td>
+	<% 				}
+	%>
 					</tr>
 	<%
 				}

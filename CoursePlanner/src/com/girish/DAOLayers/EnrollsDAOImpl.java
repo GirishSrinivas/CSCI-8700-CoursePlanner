@@ -221,5 +221,56 @@ public class EnrollsDAOImpl implements EnrollsDAO
 		}
 		
 	}
+
+	@Override
+	public boolean isPresent(EnrollsBean bean) throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		try
+		{
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT COUNT(*) FROM enrolls "
+					+ "WHERE s_netid = ? AND "
+					+ "c_id = ? AND "
+					+ "sec_term = ? AND "
+					+ "sec_year = ?");
+			ps.setString(1, bean.getNetid());
+			ps.setString(2, bean.getC_id());
+			ps.setString(3, bean.getTerm());
+			ps.setInt(4, bean.getYear());
+			ResultSet rs = ps.executeQuery();
+			rs.next();
+			
+			if (rs.getInt(1) > 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		
+		}
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		}
+		catch (SQLException e) 
+		{
+			System.out.println("is present error...");
+			throw e;
+		}
+		finally
+		{
+			try 
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch (SQLException e) 
+			{
+				throw e;
+			}
+		}
+	}
 	
 }

@@ -25,12 +25,15 @@
 	{
 		font-size: 10px;
 	}
+	th td
+	{
+		text-align: center;
+	}
 
 </style>
 <body>
 	<br>
 	<br>
-	<div class="container-fluid">
 	<%
 		SectionDAOImpl sdi = new SectionDAOImpl();
 		List<Object[]> l = new ArrayList<>();
@@ -39,26 +42,30 @@
 			if(request.getSession(false) != null)
 			{
 				UsersBean b = (UsersBean)session.getAttribute("user");
-				if(b.getRole().equals("Student"))
-				{
-	%>
-					<h2 style="text-align:center;">Course table for <%=b.getFname() +" " +b.getLname() %></h2>
-	<% 			}
-				else
-				{
-	%>
-					<h2 style="text-align:center;">Course table for the Current Academic year</h2>
-	<% 			}
+				CoursePlanDAOImpl cpd = new CoursePlanDAOImpl();
+				CoursePlanBean cpb = new CoursePlanBean();
+	
 				l = sdi.customSelect();
 	%>
-				</div>
+				<script>
+					$("title").html("<%= b.getFname() %>");
+				</script>
 				<div class="container-fluid">
 				<div class="col-sm-2">
 					<div class="nav-buttons col-sm-2">
+					<br>
+					<br>
+					<br>
 			<% 			if(b.getRole().equals("Student"))
 						{
 			%>
 							<a class="btn btn-info col-sm-12" href="studHome.jsp">Profile</a><br><br><br>
+							<a class="btn btn-success col-sm-12" href="crsform.jsp">Course Schedule</a><br><br><br>
+							<a class="btn btn-success col-sm-12" href="enroll.jsp">Course Plan</a><br><br><br>
+							<a class="btn btn-warning col-sm-12" href="#">Drop Course</a><br><br><br>
+							<a class="btn btn-success col-sm-12" href="#">Graduate Exit Requirement</a><br><br><br>
+							<a class="btn btn-success col-sm-12" href="#">Degree Works</a><br><br><br>
+							<a class="btn btn-success col-sm-12" href="#">Transcripts</a><br><br><br>
 			<% 			}
 						else
 						{
@@ -66,15 +73,21 @@
 							<a class="btn btn-info col-sm-12" href="advHome.jsp">Profile</a><br><br><br>
 			<% 			}
 			%>
-						<a class="btn btn-success col-sm-12" href="crsform.jsp">Course Schedule</a><br><br><br>
-						<a class="btn btn-success col-sm-12" href="enroll.jsp">Course Plan</a><br><br><br>
-						<a class="btn btn-success col-sm-12" href="#">Graduate Exit Requirement</a><br><br><br>
-						<a class="btn btn-success col-sm-12" href="#">Degree Works</a><br><br><br>
-						<a class="btn btn-success col-sm-12" href="#">Transcripts</a><br><br><br>
 						<a class="btn btn-danger col-sm-12" href="logout.jsp">Logout</a><br><br><br>
 					</div>
 				</div>
 				<div class="col-sm-10">
+	<% 			if(b.getRole().equals("Student"))
+				{
+	%>
+					<h1 style="text-align:center">Course table for <%=b.getFname() +" " +b.getLname() %></h1>
+	<% 			}
+				else
+				{
+	%>
+					<h2 style="text-align:center;">Course table for the Current Academic year</h2>
+	<% 			}
+	%>
 				<div class="table-responsive">
 				<table class = "table table-hover">
 				<tr>
@@ -99,6 +112,11 @@
 				{
 					SectionBean sec = (SectionBean) o[0];
 					CourseBean c = (CourseBean)o[1];
+					cpb.setC_id(sec.getCourse_no());
+					cpb.setSec_id(sec.getSection_id());
+					cpb.setTerm(sec.getTerm());
+					cpb.setYear(sec.getYear());
+					cpb.setNetid(b.getNetid());
 					
 	%>
 					<tr>
@@ -117,7 +135,19 @@
 						<td><%= sec.getS_date()%></td>
 						<td><%= sec.getE_date()%></td>
 						<td><%= sec.getInst_id()%></td>
-						<td><a   href = "enrollcrs.jsp?secid=<%=sec.getSection_id() %>&secterm=<%=sec.getTerm() %>&secyear=<%=sec.getYear() %>" class="btn btn-success" style="font-size:10px">Add</a></td>
+	<% 
+					if(cpd.isPresent(cpb)){
+	%>
+						<td><a href="#" class="btn btn-success disabled" style="font-size:10px">Add</a></td>
+	<%
+					}else
+					{
+	%>
+						<td><a  href = "enrollcrs.jsp?cid=<%= sec.getCourse_no()%>&secid=<%=sec.getSection_id() %>&secterm=<%=sec.getTerm() %>&secyear=<%=sec.getYear() %>" class="btn btn-success" style="font-size:10px">Add</a></td>
+	<%	
+					}
+	%>
+						
 					</tr>	
 	<% 			}				
 	%>

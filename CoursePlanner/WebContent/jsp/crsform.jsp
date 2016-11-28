@@ -23,7 +23,7 @@
 	}
 	.table
 	{
-		font-size: 10px;
+		font-size: 11px;
 	}
 	th td
 	{
@@ -48,7 +48,7 @@
 				l = sdi.customSelect();
 	%>
 				<script>
-					$("title").html("<%= b.getFname() %>");
+					$("title").html("<%= b.getFname() +" " +b.getLname()%>");
 				</script>
 				<div class="container-fluid">
 				<div class="col-sm-2">
@@ -105,13 +105,15 @@
 					<th>End Time</th>
 					<th>Start Date</th>
 					<th>End Date</th>
-					<th>Instructor ID</th>
+					<th>Instructor</th>
 					<th>Select</th>
 				</tr>
 	<%			for(Object[] o : l)
 				{
 					SectionBean sec = (SectionBean) o[0];
 					CourseBean c = (CourseBean)o[1];
+					InstructorBean ib = (InstructorBean)o[2];
+					
 					cpb.setC_id(sec.getCourse_no());
 					cpb.setSec_id(sec.getSection_id());
 					cpb.setTerm(sec.getTerm());
@@ -134,16 +136,16 @@
 						<td><%= sec.getE_time()%></td>
 						<td><%= sec.getS_date()%></td>
 						<td><%= sec.getE_date()%></td>
-						<td><%= sec.getInst_id()%></td>
+						<td><%= ib.getInst_fname() +" " +ib.getInst_lname()%></td>
 	<% 
 					if(cpd.isPresent(cpb)){
 	%>
-						<td><a href="#" class="btn btn-success disabled" style="font-size:10px">Add</a></td>
+						<td><a href="#" class="btn btn-success disabled" style="font-size:11px">Add</a></td>
 	<%
 					}else
 					{
 	%>
-						<td><a  href = "enrollcrs.jsp?cid=<%= sec.getCourse_no()%>&secid=<%=sec.getSection_id() %>&secterm=<%=sec.getTerm() %>&secyear=<%=sec.getYear() %>" class="btn btn-success" style="font-size:10px">Add</a></td>
+						<td><a  href = "enrollcrs.jsp?cid=<%= sec.getCourse_no()%>&secid=<%=sec.getSection_id() %>&secterm=<%=sec.getTerm() %>&secyear=<%=sec.getYear() %>" class="btn btn-success" style="font-size:11px">Add</a></td>
 	<%	
 					}
 	%>

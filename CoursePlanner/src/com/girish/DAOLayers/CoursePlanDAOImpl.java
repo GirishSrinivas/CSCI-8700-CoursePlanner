@@ -24,7 +24,7 @@ public class CoursePlanDAOImpl implements CoursePlanDAO
 			try 
 			{
 				con = MySqlUtility.getConnection();
-				PreparedStatement ps = con.prepareStatement("select crspln.c_id, course.c_name, sec_term, sec_year, grade "
+				PreparedStatement ps = con.prepareStatement("select crspln.c_id, sec_sid, course.c_name, sec_term, sec_year, grade "
 										+ "from crspln, course "
 										+ "WHERE course.c_id=crspln.c_id AND s_netid = ?");
 				ps.setString(1, netid);
@@ -36,10 +36,11 @@ public class CoursePlanDAOImpl implements CoursePlanDAO
 					cb = new CourseBean();
 					
 					bean.setC_id(rs.getString(1));
-					cb.setC_name(rs.getString(2));
-					bean.setTerm(rs.getString(3));
-					bean.setYear(rs.getInt(4));
-					bean.setGrade(rs.getString(5));
+					bean.setSec_id(rs.getString(2));
+					cb.setC_name(rs.getString(3));
+					bean.setTerm(rs.getString(4));
+					bean.setYear(rs.getInt(5));
+					bean.setGrade(rs.getString(6));
 
 					o[0] = bean;
 					o[1] = cb;

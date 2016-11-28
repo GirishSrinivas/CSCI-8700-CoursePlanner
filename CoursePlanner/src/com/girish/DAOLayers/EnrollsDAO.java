@@ -10,4 +10,5 @@ public interface EnrollsDAO
 	public void updateStatus(EnrollsBean bean) throws ClassNotFoundException, SQLException;
 	public void updateGPA(EnrollsBean bean) throws ClassNotFoundException, SQLException;
 	public void delete(EnrollsBean bean) throws ClassNotFoundException, SQLException;
+	public boolean isPresent(EnrollsBean bean) throws ClassNotFoundException, SQLException;
 }

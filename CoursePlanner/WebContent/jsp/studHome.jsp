@@ -35,7 +35,7 @@
 				StudentBean sb = (StudentBean)session.getAttribute("stud");
 	%>
 			<script>
-					$("title").html("<%= b.getFname() %>");
+					$("title").html("<%= b.getFname() +" " +b.getLname()%>");
 			</script>
 			
 			<div class="container-fluid">
@@ -69,31 +69,31 @@
 				<div class="table-responsive">
 				<table class = "table table-hover">
 					<tr>
-						<td>First Name : </td>
+						<th>First Name : </th>
 						<td><%= b.getFname() %></td>
 					</tr>
 					<tr>
-						<td>Last Name : </td>
+						<th>Last Name : </th>
 						<td><%= b.getLname() %></td>
 					</tr>
 					<tr>
-						<td>Major : </td>
+						<th>Major : </th>
 						<td><%=sb.getMajor() %></td>
 					</tr>
 					<tr>
-						<td>Level : </td>
+						<th>Level : </th>
 						<td><%= sb.getLevel() %></td>
 					</tr>
 					<tr>
-						<td>Concentration : </td>
+						<th>Concentration : </th>
 						<td><%= sb.getConcentration() %></td>
 					</tr>
 					<tr>
-						<td>Email : </td>
+						<th>Email : </th>
 						<td><%= b.getEmail() %></td>
 					</tr>
 					<tr>
-						<td>NETID : </td>
+						<th>NETID : </th>
 						<td><%= b.getNetid() %></td>
 					</tr>
 				</table>

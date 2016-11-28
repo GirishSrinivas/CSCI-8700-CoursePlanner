@@ -382,6 +382,7 @@ public class SectionDAOImpl implements SectionDAO
 		Connection con = null;
 		SectionBean beans = null;
 		CourseBean beanc = null;
+		InstructorBean ib = null;
 		List<Object []> l = new ArrayList<>();
 		Object[] o;
 		int year = Calendar.getInstance().get(Calendar.YEAR);
@@ -410,14 +411,16 @@ public class SectionDAOImpl implements SectionDAO
 			ps.execute();
 			
 			PreparedStatement ps1 = con.prepareStatement(
-					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
-					+ "from section, course "
+					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_fname, inst_lname "
+					+ "from section, course, instructor "
 					+ "WHERE course.c_id = section.c_id AND "
+					+ "instructor.inst_netid = section.inst_netid AND "
 					+ "c_rotation = ? AND sec_term = ? "
 					+ "UNION "
-					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
-					+ "from section, course "
+					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_fname, inst_lname "
+					+ "from section, course, instructor "
 					+ "WHERE course.c_id = section.c_id AND "
+					+ "instructor.inst_netid = section.inst_netid AND "
 					+ " c_rotation = 0 AND sec_term = ?");
 		
 			if(year % 2 == 0)
@@ -433,9 +436,11 @@ public class SectionDAOImpl implements SectionDAO
 			ResultSet rs = ps1.executeQuery();
 			while(rs.next())
 			{
-				o = new Object[2];
+				o = new Object[3];
 				beans = new SectionBean();
 				beanc = new CourseBean();
+				ib = new InstructorBean();
+				
 				beans.setCourse_no(rs.getString(1));
 				beans.setSection_id(rs.getString(2));
 				beanc.setC_name(rs.getString(3));
@@ -450,9 +455,11 @@ public class SectionDAOImpl implements SectionDAO
 				beans.setE_time(rs.getString(12));
 				beans.setS_date(rs.getString(13));
 				beans.setE_date(rs.getString(14));
-				beans.setInst_id(rs.getString(15));
+				ib.setInst_fname(rs.getString(15));
+				ib.setInst_lname(rs.getString(16));
 				o[0] = beans;
 				o[1] = beanc;
+				o[2] = ib;
 				
 				l.add(o);
 			}

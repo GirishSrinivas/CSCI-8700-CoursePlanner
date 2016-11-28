@@ -7,23 +7,34 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>in enroll subject</h1>
 <%
+	try
+	{
 		if(request.getSession(false) != null)
 		{
 			UsersBean b = (UsersBean)session.getAttribute("user");
-			EnrollsBean eb = new EnrollsBean();
-			eb.setNetid(b.getNetid());
-			eb.setSec_id(request.getParameter("secid"));
-			eb.setTerm(request.getParameter("secterm"));
+			CoursePlanBean cpb = new CoursePlanBean();
+			CoursePlanDAOImpl cpd = new CoursePlanDAOImpl();
+			
+			cpb.setNetid(b.getNetid());
+			cpb.setC_id(request.getParameter("cid"));
+			cpb.setSec_id(request.getParameter("secid"));
+			cpb.setTerm(request.getParameter("secterm"));
 			int year = Integer.parseInt(request.getParameter("secyear"));
-			eb.setYear(year);
-	%>
-				<%= b.getNetid()%><br>
-				<%= request.getParameter("secid")%><br>
-				<%= request.getParameter("secterm")%><br>
-				<%= request.getParameter("secyear")%><br>
-	<% 	}
-	%>
+			cpb.setYear(year);
+			cpb.setGrade("NA");
+			
+			cpd.write(cpb);	
+%>	
+			<jsp:forward page="enroll.jsp"></jsp:forward>	
+<% 		}
+	}
+	catch(Exception e)
+	{
+%>
+		<jsp:forward page="Error.jsp"></jsp:forward>
+
+<% 	}
+%>
 </body>
 </html>

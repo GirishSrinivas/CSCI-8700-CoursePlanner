@@ -7,7 +7,7 @@ public class EnrollsBean
 	private String sec_id;
 	private String term;
 	private int year;
-	private int gpa;
+	private double gpa;
 	private String grade;
 	private String status;
 	
@@ -48,11 +48,11 @@ public class EnrollsBean
 		this.year = year;
 	}
 
-	public int getGpa() {
+	public double getGpa() {
 		return gpa;
 	}
 
-	public void setGpa(int gpa) {
+	public void setGpa(double gpa) {
 		this.gpa = gpa;
 	}
 

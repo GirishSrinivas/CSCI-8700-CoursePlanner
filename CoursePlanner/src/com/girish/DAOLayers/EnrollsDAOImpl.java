@@ -12,54 +12,53 @@ public class EnrollsDAOImpl implements EnrollsDAO
 	@Override
 	public List<EnrollsBean> read() throws ClassNotFoundException, SQLException 
 	{
+		Connection con = null;
+		EnrollsBean bean = null;
+		List<EnrollsBean> l = new ArrayList<>();
+		try 
 		{
-			Connection con = null;
-			EnrollsBean bean = null;
-			List<EnrollsBean> l = new ArrayList<>();
-			try 
+			con = MySqlUtility.getConnection();
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery("select * from enrolls");
+			while(rs.next())
 			{
-				con = MySqlUtility.getConnection();
-				Statement st = con.createStatement();
-				ResultSet rs = st.executeQuery("select * from enrolls");
-				while(rs.next())
-				{
-					bean = new EnrollsBean();
+				bean = new EnrollsBean();
 					
-					bean.setNetid(rs.getString(1));
-					bean.setC_id(rs.getString(2));
-					bean.setSec_id(rs.getString(3));
-					bean.setTerm(rs.getString(4));
-					bean.setYear(rs.getShort(5));
-					bean.setGpa(rs.getInt(6));
-					bean.setGrade(rs.getString(7));
-					bean.setStatus(rs.getString(8));
+				bean.setNetid(rs.getString(1));
+				bean.setC_id(rs.getString(2));
+				bean.setSec_id(rs.getString(3));
+				bean.setTerm(rs.getString(4));
+				bean.setYear(rs.getShort(5));
+				bean.setGpa(rs.getDouble(6));
+				bean.setGrade(rs.getString(7));
+				bean.setStatus(rs.getString(8));
 					
-					l.add(bean);
-				}
-				return l;
-			} 
-			catch (ClassNotFoundException e) 
-			{
-				throw e;
-			} 
-			catch (SQLException e) 
-			{
-				System.out.println("Select Error...");
-				throw e;
+				l.add(bean);
 			}
-			finally
+			return l;
+		} 
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		} 
+		catch (SQLException e) 
+		{
+			System.out.println("Select Error...");
+			throw e;
+		}
+		finally
+		{
+			try
 			{
-				try
-				{
-					MySqlUtility.closeConnection(con);
-				}
-				catch(SQLException e)
-				{
-					throw e;
-				}
+				MySqlUtility.closeConnection(con);
+			}
+			catch(SQLException e)
+			{
+				throw e;
 			}
 		}
 	}
+
 
 	@Override
 	public void write(EnrollsBean bean) throws ClassNotFoundException, SQLException 
@@ -74,7 +73,7 @@ public class EnrollsDAOImpl implements EnrollsDAO
 			ps.setString(3, bean.getSec_id());
 			ps.setString(4, bean.getTerm());
 			ps.setInt(5, bean.getYear());
-			ps.setInt(6, bean.getGpa());
+			ps.setDouble(6, bean.getGpa());
 			ps.setString(7, bean.getGrade());
 			ps.setString(8, bean.getStatus());
 			
@@ -151,9 +150,9 @@ public class EnrollsDAOImpl implements EnrollsDAO
 		try 
 		{
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("delete from enrolls where s_netid=? and sec_term=? and sec_year=?");
-			ps.setString(1, bean.getStatus());
-			ps.setString(2, bean.getNetid());
+			PreparedStatement ps = con.prepareStatement("delete from enrolls where s_netid=? and c_id=? and sec_sid=? and sec_term=? and sec_year=?");
+			ps.setString(1, bean.getNetid());
+			ps.setString(2, bean.getC_id());
 			ps.setString(3, bean.getSec_id());
 			ps.setString(4, bean.getTerm());
 			ps.setInt(5, bean.getYear());
@@ -190,7 +189,7 @@ public class EnrollsDAOImpl implements EnrollsDAO
 		{
 			con = MySqlUtility.getConnection();
 			PreparedStatement ps = con.prepareStatement("update enrolls set gpa=? and grade=? and status=? where s_netid=? and sec_sid=? and sec_term=? and sec_year=?");
-			ps.setInt(1, bean.getGpa());
+			ps.setDouble(1, bean.getGpa());
 			ps.setString(2, bean.getGrade());
 			ps.setString(3, bean.getStatus());
 			ps.setString(4, bean.getNetid());
@@ -267,6 +266,66 @@ public class EnrollsDAOImpl implements EnrollsDAO
 				MySqlUtility.closeConnection(con);
 			}
 			catch (SQLException e) 
+			{
+				throw e;
+			}
+		}
+	}
+
+	@Override
+	public List<Object[]> read(String netid) throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		EnrollsBean bean = null;
+		CourseBean cb = null;
+		Object[] o = null;
+		List<Object[]> l = new ArrayList<>();
+		try 
+		{
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT enrolls.c_id, sec_sid, course.c_name, sec_term, sec_year, gpa, grade, status "
+									+ "FROM enrolls, course "
+									+ "WHERE enrolls.c_id=course.c_id AND s_netid=?");
+			ps.setString(1, netid);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				o = new Object[2];
+				bean = new EnrollsBean();
+				cb = new CourseBean();
+					
+				bean.setC_id(rs.getString(1));
+				bean.setSec_id(rs.getString(2));
+				cb.setC_name(rs.getString(3));
+				bean.setTerm(rs.getString(4));
+				bean.setYear(rs.getInt(5));
+				bean.setGpa(rs.getDouble(6));
+				bean.setGrade(rs.getString(7));
+				bean.setStatus(rs.getString(8));
+				
+				o[0] = bean;
+				o[1] = cb;
+					
+				l.add(o);
+			}
+			return l;
+		} 
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		} 
+		catch (SQLException e) 
+		{
+			System.out.println("Select Error...");
+			throw e;
+		}
+		finally
+		{
+			try
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch(SQLException e)
 			{
 				throw e;
 			}

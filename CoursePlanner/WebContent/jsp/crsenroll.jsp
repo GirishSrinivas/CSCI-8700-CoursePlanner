@@ -23,7 +23,7 @@
 			eb.setTerm(request.getParameter("term"));
 			int year = Integer.parseInt(request.getParameter("yr"));
 			eb.setYear(year);
-			eb.setGpa(0);
+			eb.setGpa(0.0);
 			eb.setGrade("NA");
 			eb.setStatus("Enrolled");
 			

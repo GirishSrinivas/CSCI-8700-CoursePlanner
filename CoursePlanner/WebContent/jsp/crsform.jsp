@@ -62,10 +62,10 @@
 							<a class="btn btn-info col-sm-12" href="studHome.jsp">Profile</a><br><br><br>
 							<a class="btn btn-success col-sm-12" href="crsform.jsp">Course Schedule</a><br><br><br>
 							<a class="btn btn-success col-sm-12" href="enroll.jsp">Course Plan</a><br><br><br>
-							<a class="btn btn-warning col-sm-12" href="#">Drop Course</a><br><br><br>
+							<a class="btn btn-warning col-sm-12" href="dropcrs.jsp">Drop Course</a><br><br><br>
 							<a class="btn btn-success col-sm-12" href="#">Graduate Exit Requirement</a><br><br><br>
 							<a class="btn btn-success col-sm-12" href="#">Degree Works</a><br><br><br>
-							<a class="btn btn-success col-sm-12" href="#">Transcripts</a><br><br><br>
+							<a class="btn btn-success col-sm-12" href="transcript.jsp">Transcripts</a><br><br><br>
 			<% 			}
 						else
 						{
@@ -80,7 +80,7 @@
 	<% 			if(b.getRole().equals("Student"))
 				{
 	%>
-					<h1 style="text-align:center">Course table for <%=b.getFname() +" " +b.getLname() %></h1>
+					<h2 style="text-align:center">Course table for <%=b.getFname() +" " +b.getLname() %></h2>
 	<% 			}
 				else
 				{

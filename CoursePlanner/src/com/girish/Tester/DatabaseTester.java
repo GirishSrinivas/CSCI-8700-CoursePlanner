@@ -31,7 +31,7 @@ public class DatabaseTester
 		do
 		{
 			System.out.println("1. Custom Select based on Term and Year");
-			System.out.println("2. Custom Select based on Term only");
+			System.out.println("2. Custom Select based on course ID only");
 			System.out.println("3. Select Enrollment");
 			System.out.println("4. Login");
 			System.out.println("5. is present");
@@ -63,12 +63,14 @@ public class DatabaseTester
 						}
 						break;
 						
-				case 2: System.out.print("Enter the Term: ");
+				case 2: System.out.print("Enter the course ID: ");
 						String s1 = inp.next();
+						System.out.print("Enter the Term: ");
+						String s2 = inp.next();
 				
 						try 
 						{
-							l = u.customSelectTerm(s1);
+							//l = u.customSelectTerm(s1, s2);
 						} 
 						catch (Exception e) 
 						{	

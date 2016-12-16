@@ -216,4 +216,123 @@ public class StudentDAOImpl implements StudentDAO
 		}
 	}
 
+	@Override
+	public List<Object[]> customSelect(String netid) throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		StudentBean sb = null;
+		UsersBean ub = null;
+		List<Object []> l = new ArrayList<>();
+		Object[] o;
+		try 
+		{
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT s_netid, fname, lname, s_major, s_level, s_conc, email "
+					+ "FROM student, users "
+					+ "WHERE student.s_netid = users.netid AND "
+					+ "student.s_netid = ?");
+			ps.setString(1, netid);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				sb = new StudentBean();
+				ub = new UsersBean();
+				o = new Object[2];
+				
+				sb.setS_netid(rs.getString(1));
+				ub.setFname(rs.getString(2));
+				ub.setLname(rs.getString(3));
+				sb.setMajor(rs.getString(4));
+				sb.setLevel(rs.getString(5));
+				sb.setConcentration(rs.getString(6));
+				ub.setEmail(rs.getString(7));
+				
+				o[0] = sb;
+				o[1] = ub;
+				
+				l.add(o);
+			}
+			return l;
+		} 
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		} 
+		catch (SQLException e) 
+		{
+			System.out.println("Select Error...");
+			throw e;
+		}
+		finally
+		{
+			try
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch(SQLException e)
+			{
+				throw e;
+			}
+		}
+	}
+
+	@Override
+	public List<Object[]> customSelect() throws ClassNotFoundException, SQLException 
+	{
+		Connection con = null;
+		StudentBean sb = null;
+		UsersBean ub = null;
+		List<Object []> l = new ArrayList<>();
+		Object[] o;
+		try 
+		{
+			con = MySqlUtility.getConnection();
+			PreparedStatement ps = con.prepareStatement("SELECT DISTINCT student.s_netid, fname, lname, s_major, s_level, s_conc, email "
+					+ "FROM student, users, enrolls "
+					+ "WHERE student.s_netid = users.netid AND "
+					+ "enrolls.s_netid = student.s_netid");
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				sb = new StudentBean();
+				ub = new UsersBean();
+				o = new Object[2];
+				
+				sb.setS_netid(rs.getString(1));
+				ub.setFname(rs.getString(2));
+				ub.setLname(rs.getString(3));
+				sb.setMajor(rs.getString(4));
+				sb.setLevel(rs.getString(5));
+				sb.setConcentration(rs.getString(6));
+				ub.setEmail(rs.getString(7));
+				
+				o[0] = sb;
+				o[1] = ub;
+				
+				l.add(o);
+			}
+			return l;
+		} 
+		catch (ClassNotFoundException e) 
+		{
+			throw e;
+		} 
+		catch (SQLException e) 
+		{
+			System.out.println("Select Error...");
+			throw e;
+		}
+		finally
+		{
+			try
+			{
+				MySqlUtility.closeConnection(con);
+			}
+			catch(SQLException e)
+			{
+				throw e;
+			}
+		}
+	}
+
 }

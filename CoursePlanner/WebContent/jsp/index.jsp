@@ -17,7 +17,7 @@
 	
 	<body>
 		<div class="container login-box">
-	<div class="col-sm-2"></div>
+		<div class="col-sm-2"></div>
 		<div class="col-sm-8 login-box-div">
 		<form action = "jsp/login.jsp" method = "post">
 				<div class="form-group">

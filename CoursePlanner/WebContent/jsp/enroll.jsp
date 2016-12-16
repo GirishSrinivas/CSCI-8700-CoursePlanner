@@ -65,6 +65,8 @@
 						{
 			%>
 							<a class="btn btn-info col-sm-12" href="advHome.jsp">Profile</a><br><br><br>
+							<a class="btn btn-success col-sm-12" href="crsform.jsp">Course Schedule</a><br><br><br>
+							<a class="btn btn-success col-sm-12" href="#">Students Enrolled</a><br><br><br>
 			<% 			}
 			%>
 						<a class="btn btn-danger col-sm-12" href="logout.jsp">Logout</a><br><br><br>

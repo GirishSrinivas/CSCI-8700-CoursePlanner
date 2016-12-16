@@ -10,6 +10,6 @@ public interface SectionDAO
 	public void update(SectionBean bean) throws ClassNotFoundException, SQLException;
 	public void delete(SectionBean bean) throws ClassNotFoundException, SQLException;
 	public List<Object []> customSelect(String s, int year) throws ClassNotFoundException, SQLException;
-	public List<Object []> customSelectTerm(String s) throws ClassNotFoundException, SQLException;
+	public List<Object []> customSelectTerm(String cid, String term, int year) throws ClassNotFoundException, SQLException;
 	public List<Object []> customSelect() throws ClassNotFoundException, SQLException;
 }

@@ -71,20 +71,21 @@ public class SectionDAOImpl implements SectionDAO
 		
 		try {
 			con = MySqlUtility.getConnection();
-			PreparedStatement ps = con.prepareStatement("insert into login values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into section values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setString(1, bean.getCourse_no());
 			ps.setString(2, bean.getSection_id());
-			ps.setString(3, bean.getTerm());
-			ps.setInt(4, bean.getYear());
-			ps.setString(5, bean.getInst_id());
-			ps.setInt(6, bean.getTotal_seats());
-			ps.setInt(7, bean.getSeats_taken());
+			ps.setInt(3, bean.getYear());
+			ps.setString(4, bean.getTerm());
+			ps.setInt(5, bean.getTotal_seats());
+			ps.setInt(6, bean.getSeats_taken());
+			ps.setString(7, bean.getStatus());
 			ps.setString(8, bean.getLoc());
 			ps.setString(9, bean.getDays());
-			ps.setString(10, bean.getS_date());
-			ps.setString(11, bean.getE_date());
-			ps.setString(12, bean.getS_time());
-			ps.setString(13, bean.getE_time());
+			ps.setString(10, bean.getS_time());
+			ps.setString(11, bean.getE_time());
+			ps.setString(12, bean.getS_date());
+			ps.setString(13, bean.getE_date());
+			ps.setString(14, bean.getInst_id());
 			
 			ps.execute();
 			System.out.println("Data Inserted Successfully");
@@ -97,6 +98,7 @@ public class SectionDAOImpl implements SectionDAO
 		catch (SQLException e) 
 		{
 			System.out.println("Insertion Error");
+			e.printStackTrace();
 			throw e;
 		}
 		finally
@@ -289,14 +291,15 @@ public class SectionDAOImpl implements SectionDAO
 	}
 
 	@Override
-	public List<Object[]> customSelectTerm(String s) throws ClassNotFoundException, SQLException 
+	public List<Object[]> customSelectTerm(String cid, String term, int year) throws ClassNotFoundException, SQLException 
 	{
 		Connection con = null;
 		SectionBean beans = null;
 		CourseBean beanc = null;
+		InstructorBean ib = null;
 		List<Object []> l = new ArrayList<>();
 		Object[] o;
-		int year = Calendar.getInstance().get(Calendar.YEAR);
+		//int year = Calendar.getInstance().get(Calendar.YEAR);
 		
 		try
 		{
@@ -306,15 +309,17 @@ public class SectionDAOImpl implements SectionDAO
 			ps.execute();
 			
 			PreparedStatement ps1 = con.prepareStatement(
-					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
-					+ "from section, course "
+					"SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_fname, inst_lname "
+					+ "from section, course, instructor "
 					+ "WHERE course.c_id = section.c_id AND "
-					+ "c_rotation = ? AND sec_term = ? "
+					+ "instructor.inst_netid = section.inst_netid AND "
+					+ "c_rotation = ? AND section.c_id = ? AND sec_term = ? "
 					+ "UNION "
-					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_netid "
-					+ "from section, course "
+					+ "SELECT section.c_id, sec_sid, c_name, sec_term, sec_year, sec_seats, sec_aseats, sec_enstat, sec_loc, sec_days, sec_stime, sec_etime, sec_sdate, sec_edate, inst_fname, inst_lname "
+					+ "from section, course, instructor "
 					+ "WHERE course.c_id = section.c_id AND "
-					+ " c_rotation = 0 AND sec_term = ?");
+					+ "instructor.inst_netid = section.inst_netid AND "
+					+ " c_rotation = 0 AND section.c_id = ? AND sec_term = ?");
 		
 			if(year % 2 == 0)
 			{
@@ -324,14 +329,18 @@ public class SectionDAOImpl implements SectionDAO
 			{
 				ps1.setInt(1, 1);
 			}
-			ps1.setString(2, s);
-			ps1.setString(3, s);
+			ps1.setString(2, cid);
+			ps1.setString(3, term);
+			ps1.setString(4, cid);
+			ps1.setString(5, term);
 			ResultSet rs = ps1.executeQuery();
 			while(rs.next())
 			{
-				o = new Object[2];
+				o = new Object[3];
 				beans = new SectionBean();
 				beanc = new CourseBean();
+				ib = new InstructorBean();
+				
 				beans.setCourse_no(rs.getString(1));
 				beans.setSection_id(rs.getString(2));
 				beanc.setC_name(rs.getString(3));
@@ -346,12 +355,19 @@ public class SectionDAOImpl implements SectionDAO
 				beans.setE_time(rs.getString(12));
 				beans.setS_date(rs.getString(13));
 				beans.setE_date(rs.getString(14));
-				beans.setInst_id(rs.getString(15));
+				ib.setInst_fname(rs.getString(15));
+				ib.setInst_lname(rs.getString(16));
 				o[0] = beans;
 				o[1] = beanc;
+				o[2] = ib;
 				
 				l.add(o);
 			}
+			int yy = Calendar.getInstance().get(Calendar.YEAR);
+			ps = con.prepareStatement("update section set sec_year = ?");
+			ps.setInt(1, yy);
+			ps.execute();
+			
 			return l;
 		}
 		catch (ClassNotFoundException e) 

@@ -8,6 +8,14 @@ Required software to run the project
   4. MAMP server for database
   5. MySql connector
   
+ Running database script:
+  1. dowload and install MAMP server
+  2. click on start server
+  3. in the GUI web interface provided by MAMP select phpmyadmin
+  4. select import tab in the web interface
+  5. browse for the file "course_planner_DDL.sql" under the folder "course_planner_dbDesign"
+  6. click on "GO", the database will be populated.
+  
 Steps to import the project
   1. clone the repo or download the zip file and unzip the folder
   2. open Eclipse IDE and from the menu bar select "Open project from file system" and browse for the cloned project
